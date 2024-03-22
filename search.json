@@ -1,0 +1,77 @@
+[
+  {
+    "objectID": "slides/index.html#acknowledgements",
+    "href": "slides/index.html#acknowledgements",
+    "title": "Untitled",
+    "section": "Acknowledgements",
+    "text": "Acknowledgements\n\n\n\n\nThis work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA4.0)."
+  },
+  {
+    "objectID": "slides/index.html#daniel-d.-sjoberg",
+    "href": "slides/index.html#daniel-d.-sjoberg",
+    "title": "Untitled",
+    "section": "Daniel D. Sjoberg",
+    "text": "Daniel D. Sjoberg\n\n\n danieldsjoberg.com\n social/@ddsjoberg\n linkedin.com/in/ddsjoberg\n github.com/ddsjoberg\n\n\n\n\n\n\n\n\nCDISC Analysis Results Data with {cards}+{gtsummary}"
+  },
+  {
+    "objectID": "material.html",
+    "href": "material.html",
+    "title": "Material",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Materials"
+    ]
+  },
+  {
+    "objectID": "material.html#slides",
+    "href": "material.html#slides",
+    "title": "Material",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Materials"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "CDISC Analysis Results Data with {cards}+{gtsummary}",
+    "section": "",
+    "text": "🗓️ March 29, 2024 | 09:15 - 09:45 CST\n🏨 Novartis Campus, Shanghai, China\n💥 Conference Registration (¥150)\n\n\nAbstract\nThe CDISC Analysis Results Data (ARD) Model is an emerging standard for encoding statistical analysis outcomes in a machine-readable format. Its primary objective is to streamline the processes of automation, ensuring reproducibility, promoting reusability, and enhancing traceability.\nThe {cards} R package offers a range of functions for ARD generation, from basic univariate summaries like means and tabulations to complex multivariable summaries encompassing regression models and statistical tests.\nThe package includes functionalities to represent results in various formats, including JSON and YAML. Thanks to its flexible structures, the {cards} package can be harnessed in diverse applications, such as generating tables for regulatory submissions and conducting quality control checks on existing tables. Furthermore, the {cards} ARD object can be accessed through a REST API, allowing writers to dynamically incorporate table results into reports.\nWhile {cards} calculates statistics and stores them in a structured object, it cannot present those results; this, however, is where the {gtsummary} package shines. The {gtsummary} package offers a modular framework to construct summary tables. It is the most widely used package for summary tables in the healthcare/pharmaceutical space, and won the American Statistical Association’s 2021 award for Innovation in Statistical Programming and Analytics. The {gtsummary} package is currently being refactored to utilize {cards} as its backend, which will allow users to both extract an ARD object from a {gtsummary} table and use an ARD object to construct a {gtsummary} table. The {cards} and {gtsummary} packages stand as robust and versatile tools, poised to assist in a multitude of analytical endeavors.\n\n\nPresenter\n\nDaniel D. Sjoberg (he/him) is a Senior Principal Data Scientist at Genentech. Previously, he was a Lead Data Science Manager at the Prostate Cancer Clinical Trials Consortium, and a Senior Biostatistician at Memorial Sloan Kettering Cancer Center in New York City. He enjoys R package development, creating many packages available on CRAN, R-Universe, and GitHub. His research interests include adaptive methods in clinical trials, precision medicine, and predictive modeling. Daniel is the winner of the 2021 American Statistical Association (ASA) Innovation in Statistical Programming and Analytics award.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "license.html",
+    "href": "license.html",
+    "title": "License",
+    "section": "",
+    "text": "This work is licensed under a Creative Commons Attribution 4.0 International License.",
+    "crumbs": [
+      "License"
+    ]
+  },
+  {
+    "objectID": "slides/00-setup.html",
+    "href": "slides/00-setup.html",
+    "title": "Untitled",
+    "section": "",
+    "text": "── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.4.4     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\n\n\n\n\n\n\nThis work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA4.0).\n\n\n\n\n\n\n\n danieldsjoberg.com\n social/@ddsjoberg\n linkedin.com/in/ddsjoberg\n github.com/ddsjoberg"
+  },
+  {
+    "objectID": "slides/00-setup.html#acknowledgements",
+    "href": "slides/00-setup.html#acknowledgements",
+    "title": "Untitled",
+    "section": "",
+    "text": "This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA4.0)."
+  },
+  {
+    "objectID": "slides/00-setup.html#daniel-d.-sjoberg",
+    "href": "slides/00-setup.html#daniel-d.-sjoberg",
+    "title": "Untitled",
+    "section": "",
+    "text": "danieldsjoberg.com\n social/@ddsjoberg\n linkedin.com/in/ddsjoberg\n github.com/ddsjoberg"
+  }
+]
