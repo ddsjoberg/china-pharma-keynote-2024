@@ -3,8 +3,6 @@ title: "Material"
 editor: source
 ---
 
-## Slides
-
 [View slides in full screen](/slides/index.html)
 
 ```{=html}

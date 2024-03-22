@@ -1,5 +1,5 @@
 ---
-title: "CDISC Analysis Results Data with cards+gtsummary"
+title: "CDISC Analysis Results Data with {cards}+{gtsummary}"
 author: "Daniel D. Sjoberg"
 footer:  "[CDISC Analysis Results Data with {cards}+{gtsummary}](https://www.danieldsjoberg.com/china-pharma-keynote-2024/)"
 logo: "images/v2-gtsummary-cards-cardx-HexSticker.png"
