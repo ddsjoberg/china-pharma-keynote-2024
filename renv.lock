@@ -1138,8 +1138,9 @@
     },
     "progress": {
       "Package": "progress",
-      "Version": "1.2.3.9000",
-      "Source": "unknown",
+      "Version": "1.2.3",
+      "Source": "Repository",
+      "Repository": "CRAN",
       "Requirements": [
         "R",
         "R6",
@@ -1147,7 +1148,7 @@
         "hms",
         "prettyunits"
       ],
-      "Hash": "09d5e8b57d16a8b866023c8f8cd93e9a"
+      "Hash": "f4625e061cb2865f111b47ff163a5ca6"
     },
     "ps": {
       "Package": "ps",
