@@ -1,7 +1,3 @@
----
-title: "Untitled"
----
-
 # Introduction
 
 ```{r}
