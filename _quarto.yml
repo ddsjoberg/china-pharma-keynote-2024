@@ -1,0 +1,47 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - "*.qmd"
+
+website:
+  page-navigation: true
+  title: "CDISC Analysis Results Data with {cards}+{gtsummary}"
+  description: "China Pharma R User Conference"
+  favicon: "images/v1-gtsummary-cards-cardx-HexSticker.png"
+
+  repo-url: https://github.com/ddsjoberg/china-pharma-keynote-2024
+  repo-actions: [edit, issue]
+
+  page-footer:
+    left: "This page is built with ❤️ and [Quarto](https://quarto.org/). Inspired by [@minecr.bsky.social](https://bsky.app/profile/minecr.bsky.social)."
+    background: "#708090"
+
+  sidebar:
+    background: "#708090"
+    logo: "images/v1-gtsummary-cards-cardx-HexSticker.png"
+    pinned: true
+    align: center
+    tools:
+      - icon: github
+        href: https://github.com/ddsjoberg/china-pharma-keynote-2024
+        text: GitHub
+    style: docked
+    contents:
+     - href: index.qmd
+       text: Home
+     - href: material.qmd
+       text: Materials
+     - href: license.qmd
+
+format:
+  html:
+    theme: [cosmo, theme.scss]
+    toc: true
+    code-copy: true
+    code-overflow: scroll
+    mainfont: "Atkinson Hyperlegible"
+    highlight-style: a11y
+
+editor: source
+

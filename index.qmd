@@ -1,0 +1,42 @@
+---
+title: "CDISC Analysis Results Data with {cards}+{gtsummary}"
+subtitle: "China Pharma R User Conference Keynote Address"
+engine: knitr
+editor: source
+---
+
+<!-- https://github.com/rstudio-conf-2022/teach-ds -->
+
+------------------------------------------------------------------------
+
+🗓️ March 29, 2024 \| 09:15 - 09:45 CST
+
+🏨 Novartis Campus, Shanghai, China 
+
+💥 [Conference Registration](https://pharmarug.github.io/pharmarug-2024/reg.html) (¥150)
+
+------------------------------------------------------------------------
+
+# Abstract
+
+The CDISC Analysis Results Data (ARD) Model is an emerging standard for encoding statistical analysis outcomes in a machine-readable format. Its primary objective is to streamline the processes of automation, ensuring reproducibility, promoting reusability, and enhancing traceability.
+
+The {cards} R package offers a range of functions for ARD generation, from basic univariate summaries like means and tabulations to complex multivariable summaries encompassing regression models and statistical tests.
+
+The package includes functionalities to represent results in various formats, including JSON and YAML. Thanks to its flexible structures, the {cards} package can be harnessed in diverse applications, such as generating tables for regulatory submissions and conducting quality control checks on existing tables. Furthermore, the {cards} ARD object can be accessed through a REST API, allowing writers to dynamically incorporate table results into reports. 
+
+While {cards} calculates statistics and stores them in a structured object, it cannot present those results; this, however, is where the {gtsummary} package shines. The {gtsummary} package offers a modular framework to construct summary tables. It is the most widely used package for summary tables in the healthcare/pharmaceutical space, and won the American Statistical Association’s 2021 award for Innovation in Statistical Programming and Analytics. The {gtsummary} package is currently being refactored to utilize {cards} as its backend, which will allow users to both extract an ARD object from a {gtsummary} table and use an ARD object to construct a {gtsummary} table. The {cards} and {gtsummary} packages stand as robust and versatile tools, poised to assist in a multitude of analytical endeavors.
+ 
+# Presenter
+
+![](images/dan-circle.png){style="float:left;padding: 0 10px 0 0;" fig-alt="Headshot of Daniel Sjoberg" width="150"}
+
+[**Daniel D. Sjoberg**](https://www.danieldsjoberg.com/) (he/him) is a Senior Principal Data Scientist at Genentech. Previously, he was a Lead Data Science Manager at the Prostate Cancer Clinical Trials Consortium, and a Senior Biostatistician at Memorial Sloan Kettering Cancer Center in New York City.
+He enjoys R package development, creating many packages available on [CRAN](https://cran.r-project.org/web/packages/), [R-Universe](https://ddsjoberg.r-universe.dev/ui#packages), and [GitHub](https://github.com/ddsjoberg). 
+His research interests include adaptive methods in clinical trials, precision medicine, and predictive modeling.
+Daniel is the winner of the 2021 American Statistical Association (ASA) Innovation in Statistical Programming and Analytics award.
+
+[`r fontawesome::fa("link")`](https://www.danieldsjoberg.com)
+[`r fontawesome::fa("linkedin")`](https://www.linkedin.com/in/ddsjoberg/)
+[`r fontawesome::fa("github")`](https://github.com/ddsjoberg/)
+[`r fontawesome::fa("mastodon")`](https://mastodon.social/@ddsjoberg)
