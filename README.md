@@ -1,3 +1,2 @@
-# ARD Onboarding
+# CDISC Analysis Results Data with {cards}+{gtsummary}
 
-Website with recources for those onbaoarding to the to the {cards}, {cardx}, and {gtsummary} projects.
