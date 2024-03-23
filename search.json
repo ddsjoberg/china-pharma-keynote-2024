@@ -7,11 +7,18 @@
     "text": "Acknowledgements\n\n\n\n\nThis work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA4.0)."
   },
   {
-    "objectID": "slides/index.html#daniel-d.-sjoberg",
-    "href": "slides/index.html#daniel-d.-sjoberg",
+    "objectID": "slides/index.html#蘇丹杰-daniel-d.-sjoberg",
+    "href": "slides/index.html#蘇丹杰-daniel-d.-sjoberg",
     "title": "CDISC Analysis Results Data with {cards} + {gtsummary}",
-    "section": "Daniel D. Sjoberg",
-    "text": "Daniel D. Sjoberg\n\n\n danieldsjoberg.com\n social/@ddsjoberg\n linkedin.com/in/ddsjoberg\n github.com/ddsjoberg\n\n\n\n\n\n\n\n\nCDISC Analysis Results Data with {cards}+{gtsummary}"
+    "section": "蘇丹杰 (Daniel D. Sjoberg)",
+    "text": "蘇丹杰 (Daniel D. Sjoberg)\n\n\n\nSenior Principal Data Scientist at Genentech/Roche\n13+ years at Memorial Sloan Kettering Cancer Center as a Biostatistician\nPublished 250+ papers in peer-reviewed journals and served on Editorial Board of European Urology\nWritten and contributed to many R packages available on CRAN, R Universe, and GitHub.\n\n\n\n\n danieldsjoberg.com\n @ddsjoberg.bsky.social\n social/@ddsjoberg\n linkedin.com/in/ddsjoberg\n github.com/ddsjoberg"
+  },
+  {
+    "objectID": "slides/index.html#outline",
+    "href": "slides/index.html#outline",
+    "title": "CDISC Analysis Results Data with {cards} + {gtsummary}",
+    "section": "Outline",
+    "text": "Outline\n\n\n\nAnalysis Results Standard (ARS)\nAnalysis Results Data (ARD)\n{cards} + {cardx} R packages\n{gtsummary} R Package\n\n\n\n\n\n\nCDISC Analysis Results Data with {cards}+{gtsummary}"
   },
   {
     "objectID": "material.html",
@@ -46,22 +53,29 @@
   {
     "objectID": "slides/00-setup.html",
     "href": "slides/00-setup.html",
-    "title": "Introduction",
-    "section": "",
-    "text": "#BlackLivesMatter\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.4.4     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\n\n\n\n\n\n\nThis work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA4.0).\n\n\n\n\n\n\n\n danieldsjoberg.com\n social/@ddsjoberg\n linkedin.com/in/ddsjoberg\n github.com/ddsjoberg"
-  },
-  {
-    "objectID": "slides/00-setup.html#acknowledgements",
-    "href": "slides/00-setup.html#acknowledgements",
-    "title": "Introduction",
+    "title": "CDISC Analysis Results Data with {cards}+{gtsummary}",
     "section": "",
     "text": "This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA4.0)."
   },
   {
-    "objectID": "slides/00-setup.html#daniel-d.-sjoberg",
-    "href": "slides/00-setup.html#daniel-d.-sjoberg",
-    "title": "Introduction",
+    "objectID": "slides/00-setup.html#acknowledgements",
+    "href": "slides/00-setup.html#acknowledgements",
+    "title": "CDISC Analysis Results Data with {cards}+{gtsummary}",
     "section": "",
-    "text": "danieldsjoberg.com\n social/@ddsjoberg\n linkedin.com/in/ddsjoberg\n github.com/ddsjoberg"
+    "text": "This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA4.0)."
+  },
+  {
+    "objectID": "slides/00-setup.html#蘇丹杰-daniel-d.-sjoberg",
+    "href": "slides/00-setup.html#蘇丹杰-daniel-d.-sjoberg",
+    "title": "CDISC Analysis Results Data with {cards}+{gtsummary}",
+    "section": "蘇丹杰 (Daniel D. Sjoberg)",
+    "text": "蘇丹杰 (Daniel D. Sjoberg)\n\n\n\nSenior Principal Data Scientist at Genentech/Roche\n13+ years at Memorial Sloan Kettering Cancer Center as a Biostatistician\nPublished 250+ papers in peer-reviewed journals and served on Editorial Board of European Urology\nWritten and contributed to many R packages available on CRAN, R Universe, and GitHub.\n\n\n\n\nr fontawesome::fa(\"link\", fill = fa_fill) danieldsjoberg.com\nr fontawesome::fa(\"cloud\", fill = fa_fill) @ddsjoberg.bsky.social\nr fontawesome::fa(\"mastodon\", fill = fa_fill) social/@ddsjoberg\nr fontawesome::fa(\"linkedin\", fill = fa_fill) linkedin.com/in/ddsjoberg\nr fontawesome::fa(\"github\", fill = fa_fill) github.com/ddsjoberg"
+  },
+  {
+    "objectID": "slides/00-setup.html#outline",
+    "href": "slides/00-setup.html#outline",
+    "title": "CDISC Analysis Results Data with {cards}+{gtsummary}",
+    "section": "Outline",
+    "text": "Outline\n\n\n\nAnalysis Results Standard (ARS)\nAnalysis Results Data (ARD)\n{cards} + {cardx} R packages\n{gtsummary} R Package"
   }
 ]
