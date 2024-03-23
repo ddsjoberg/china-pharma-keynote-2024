@@ -1,26 +1,3 @@
-# Introduction
-
-```{r}
-#| echo: false
-#| cache: false
-library(gtsummary)
-library(tidyverse)
-
-knit_print.gtsummary <- function(x, ...) {
-  gtsummary::as_gt(x) |> gt::as_raw_html()
-}
-
-knit_print.gt_tbl <- function(x, ...) {
-  gt::as_raw_html(x)
-}
-
-registerS3method("knit_print", "gtsummary", knit_print.gtsummary)
-registerS3method("knit_print", "gt_tbl", knit_print.gt_tbl)
-
-# fill for font awesome icons
-fa_fill <- "#606060"
-```
-
 ## Acknowledgements
 
 ::: {.columns .v-center-container}
@@ -33,21 +10,52 @@ This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 Inter
 :::
 :::
 
-## Daniel D. Sjoberg
+## 蘇丹杰 (Daniel D. Sjoberg)
+
 
 ::: {.columns .v-center-container}
 ::: {.column width="60%"}
+* Senior Principal Data Scientist at Genentech/Roche
+
+* 13+ years at Memorial Sloan Kettering Cancer Center as a Biostatistician
+
+* Published 250+ papers in peer-reviewed journals and served on Editorial Board of European Urology
+
+* Written and contributed to many R packages available on CRAN, R Universe, and GitHub.
+:::
+
+::: {.column width="40%"}
+::: {.small}
+
+![](images/dan-circle.png)
+
 `r fontawesome::fa("link", fill = fa_fill)` [danieldsjoberg.com](https://www.danieldsjoberg.com/)
+
+`r fontawesome::fa("cloud", fill = fa_fill)` [\@ddsjoberg.bsky.social](https://bsky.app/profile/ddsjoberg.bsky.social)
 
 `r fontawesome::fa("mastodon", fill = fa_fill)` [social/\@ddsjoberg](https://mastodon.social/@ddsjoberg)
 
 `r fontawesome::fa("linkedin", fill = fa_fill)` [linkedin.com/in/ddsjoberg](https://www.linkedin.com/in/ddsjoberg/)
 
 `r fontawesome::fa("github", fill = fa_fill)` [github.com/ddsjoberg](https://github.com/ddsjoberg/)
+
 :::
 
-::: {.column width="40%"}
-![](images/dan-circle.png)
 :::
+:::
+
+## Outline
+
+::: {.larger}
+<br>
+
+- Analysis Results Standard (ARS)
+
+- Analysis Results Data (ARD)
+
+- {cards} + {cardx} R packages 
+
+- {gtsummary} R Package
+
 :::
 

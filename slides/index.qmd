@@ -18,28 +18,28 @@ execute:
 cache: true
 ---
 
+# Introduction
 
-<!-- --- -->
-<!-- title: "CDISC Analysis Results Data with {cards}+{gtsummary}" -->
-<!-- subtitle: "this is my subtitle2" -->
-<!-- author: "Daniel D. Sjoberg" -->
-<!-- footer:  "[CDISC Analysis Results Data with {cards}+{gtsummary}](https://www.danieldsjoberg.com/china-pharma-keynote-2024/)" -->
-<!-- logo: "images/v2-gtsummary-cards-cardx-HexSticker.png" -->
-<!-- editor: source -->
-<!-- engine: knitr -->
-<!-- format:  -->
-<!--   revealjs:  -->
-<!--     theme: slides.scss -->
-<!--     transition: fade -->
-<!--     slide-number: true -->
-<!--     chalkboard: true -->
-<!-- execute: -->
-<!--   echo: true -->
-<!--   output: asis -->
-<!--   freeze: auto -->
-<!-- cache: true -->
-<!-- --- -->
+```{r}
+#| echo: false
+#| cache: false
+library(gtsummary)
+library(tidyverse)
 
+knit_print.gtsummary <- function(x, ...) {
+  gtsummary::as_gt(x) |> gt::as_raw_html()
+}
+
+knit_print.gt_tbl <- function(x, ...) {
+  gt::as_raw_html(x)
+}
+
+registerS3method("knit_print", "gtsummary", knit_print.gtsummary)
+registerS3method("knit_print", "gt_tbl", knit_print.gt_tbl)
+
+# fill for font awesome icons
+fa_fill <- "#606060"
+```
 
 
 {{< include 00-setup.qmd >}}
