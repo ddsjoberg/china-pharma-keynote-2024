@@ -1,0 +1,23 @@
+# Analysis Results Data
+
+## Analysis Results Data (ARD)
+
+* Encodes statistical analysis outcomes in a machine-readable format.
+
+* Primary objective is to streamline the processes of automation, ensuring reproducibility, promoting reusability, and enhancing traceability.
+
+* The ARD model specified how statistical results are saved into a structured format.
+
+* The ARD can be used to to subsequently create tables and figures.
+
+## Analysis Results Data (ARD)
+
+* After the initial creation of an ARD, the results can later be re-used again and again for subsequent reporting needs.
+
+![](images/ard-flow.png){fig-align="center"}
+
+::: {.notes}
+
+- Re-creating a figure with only two of the three treatment arms shown, or pruning a large complex table to show only the most interesting results for a presentation (when the initial results may been prepared for regulatory purposes).
+
+:::

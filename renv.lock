@@ -266,6 +266,38 @@
       ],
       "Hash": "9f0e4fae4963ba775a5e5c520838c87b"
     },
+    "cards": {
+      "Package": "cards",
+      "Version": "0.1.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "cli",
+        "dplyr",
+        "glue",
+        "rlang",
+        "tidyr",
+        "tidyselect"
+      ],
+      "Hash": "9c4837e8ea64efc048919647b2a23041"
+    },
+    "cardx": {
+      "Package": "cardx",
+      "Version": "0.1.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "cards",
+        "cli",
+        "dplyr",
+        "glue",
+        "rlang",
+        "tidyr"
+      ],
+      "Hash": "40c622874954d822d123922b9708ec5a"
+    },
     "cellranger": {
       "Package": "cellranger",
       "Version": "1.1.0",

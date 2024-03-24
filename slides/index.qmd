@@ -23,6 +23,8 @@ cache: true
 ```{r}
 #| echo: false
 #| cache: false
+library(cards)
+library(cardx)
 library(gtsummary)
 library(tidyverse)
 
@@ -42,5 +44,12 @@ fa_fill <- "#606060"
 ```
 
 
-{{< include 00-setup.qmd >}}
+<!-- {{< include 00-setup.qmd >}} -->
+
+<!-- {{< include 01-ars.qmd >}} -->
+
+<!-- {{< include 02-ard.qmd >}} -->
+
+{{< include 03-cards.qmd >}}
+
 

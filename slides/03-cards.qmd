@@ -1,0 +1,9 @@
+# {cards} 
+
+## {cards} <a href="https://insightsengineering.github.io/cards/"><img src="https://insightsengineering.github.io/cards/latest-tag/logo.png" align="right" height="138" alt="cards website" /></a>
+
+```{r}
+library(cards)
+
+ard_continuous(ADSL, variables = AGE)
+```

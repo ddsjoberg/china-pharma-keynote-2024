@@ -1,0 +1,79 @@
+# Analysis Results Standard
+
+## Analysis Results Standard (ARS)
+
+![](images/ars-flow.png){.fragment fig-align="center"}
+
+![](images/ars-objectives.png){.fragment fig-align="center"}
+
+## Analysis Results Standard (ARS)
+
+-   Emerging standard for **prospectively** encoding statistical analysis reporting pipeline in a machine-readable format.
+
+-   Primary objectives are to leverage analysis results metadata to drive the automation of results and support storage, access, processing, traceability and reproducibility of results.
+
+-   Logical model that describes analysis results and associated metadata.
+
+-   Focus on concepts, _not layout_, e.g. the summary statistics, not how the results are shown in a table. 
+
+-   Learn more at [https://www.cdisc.org/events/webinar/analysis-results-standard-public-review](https://www.cdisc.org/events/webinar/analysis-results-standard-public-review) 
+
+## Analysis Results Standard (ARS)
+
+Example ARS Flow
+
+![](images/ars-example-flow.png){fig-align="center"}
+
+::: {.notes}
+- Overview of the meta data
+
+  - the data sets
+  
+  - the exclusions (e.g. ITT population)
+  
+  - I know the details here are sparse, but we need to get the meat of this presentation!
+  
+- Overview of ARD
+
+  - Structured object to save summary results
+  
+  - Can be used for simply summary statistics or complex analyses
+  
+  - We can also save instructions formatting the results
+  
+- Lastly, TLGs
+
+  - We're all familiar with the TLGs, I presume.
+  
+  - The ARS fills the gap between ADaM and TLGs
+
+::: 
+
+## Analysis Results Standard (ARS)
+
+Example ARS Flow
+
+![](images/ars-example-flow-with-hex.png){fig-align="center"}
+
+::: {.notes}
+
+- {cards} helps us easily build analysis results data sets
+
+  - YES, THIS IS A DRAFT HEX STICKER
+
+- after the re-factor is complete, gtsummary will help us build tables from ARDs
+
+:::
+
+## Analysis Results Data (ARD)
+
+* Encodes statistical analysis outcomes in a machine-readable format.
+
+* Primary objective is to streamline the processes of automation, ensuring reproducibility, promoting reusability, and enhancing traceability.
+
+* The ARD model specified how statistical results are saved into a structured format.
+
+* The ARD can be used to to subsequently create tables and figures.
+
+* After the initial creation of an ARD, the results can later be re-used again and again for subsequent reporting needs; for example, re-creating a figure with only two of the three treatment arms shown, or pruning a large complex table to show only the most interesting results for a presentation (when the initial results may been prepared for regulatory purposes).
+
