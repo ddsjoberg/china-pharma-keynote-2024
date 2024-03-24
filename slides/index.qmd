@@ -13,8 +13,8 @@ format:
     chalkboard: true
 execute:
   echo: true
-  freeze: auto
-cache: true
+  freeze: false
+cache: false
 ---
 
 # Introduction
@@ -43,13 +43,13 @@ fa_fill <- "#606060"
 ```
 
 
-<!-- {{< include 00-setup.qmd >}} -->
+{{< include 00-setup.qmd >}}
 
-<!-- {{< include 01-ars.qmd >}} -->
+{{< include 01-ars.qmd >}}
 
-<!-- {{< include 02-ard.qmd >}} -->
+{{< include 02-ard.qmd >}}
 
-<!-- {{< include 03-cards.qmd >}} -->
+{{< include 03-cards.qmd >}}
 
 {{< include 04-cardx.qmd >}}
 

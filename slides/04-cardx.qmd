@@ -32,9 +32,9 @@ We're using the default computation method (Wald) and confidence level (95%).
 
 ```{r}
 #| message: true
-ADSL |> 
+cards::ADSL |> 
   dplyr::mutate(COMPLETED = DCDECOD == "COMPLETED") |> 
-  ard_proportion_ci(variables = COMPLETED) # using default CI method 'Wald'
+  cardx::ard_proportion_ci(variables = COMPLETED) # using default CI method 'Wald'
 ```
 
 ## {cardx} in Practice: _Gone Wrong_ 😱
@@ -45,8 +45,8 @@ What happens when statistics are un-calculable?
 
 ```{r}
 #| message: true
-ard_gone_wrong <- ADSL |> 
-  ard_continuous(
+ard_gone_wrong <- cards::ADSL |> 
+  cards::ard_continuous(
     variable = AGEGR1,
     statistic = ~list(kurtosis = \(x) e1071::kurtosis(x, na.rm = TRUE))
   )
