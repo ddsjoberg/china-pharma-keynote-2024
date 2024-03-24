@@ -202,9 +202,14 @@
     },
     "broom.helpers": {
       "Package": "broom.helpers",
-      "Version": "1.14.0",
-      "Source": "Repository",
-      "Repository": "CRAN",
+      "Version": "1.14.0.9000",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "larmarange",
+      "RemoteRepo": "broom.helpers",
+      "RemoteRef": "main",
+      "RemoteSha": "e00ffa61da779c0d47063befab585df24b666d7d",
       "Requirements": [
         "R",
         "broom",
@@ -219,7 +224,7 @@
         "tibble",
         "tidyr"
       ],
-      "Hash": "ea30eb5d9412a4a5c2740685f680cd49"
+      "Hash": "a5b7229bc5e536ff8ef748f1aa32ca08"
     },
     "bslib": {
       "Package": "bslib",

@@ -1,9 +1,92 @@
 # {cards} 
 
-## {cards} <a href="https://insightsengineering.github.io/cards/"><img src="https://insightsengineering.github.io/cards/latest-tag/logo.png" align="right" height="138" alt="cards website" /></a>
+## {cards} R Package <a href="https://insightsengineering.github.io/cards/"><img src="https://insightsengineering.github.io/cards/latest-tag/logo.png" align="right" height="138" alt="cards website" /></a>
+
+Let's check out a simple example 
 
 ```{r}
+#| message: true
 library(cards)
 
+# create ARD with default summary statistics
 ard_continuous(ADSL, variables = AGE)
 ```
+
+::: {.notes}
+
+- one line per statistic
+
+- includes default set of summary statistics
+
+- default formatting function (in this case, the integer is shortcut to format/round to 1 decimal place)
+
+- a simple data frame result, which means it is easy to work with a modify
+
+:::
+
+## {cards}: `ard_continuous()` arguments
+
+::: {.small}
+- `by`: summary statistics are calculated by all combinations of the by variables, including unobserved factor levels
+
+- `statistic`: specify univariate summary statistics. Accepts _any_ function, base R, from a package, or user-defined.
+
+- `fmt_fn`: Override the default formatting functions, e.g. when you need 
+
+:::
+
+```{r}
+#| message: true
+ADSL |> 
+  ard_continuous(
+    variables = AGE,
+    by = ARM, # calculate summary stats by treatment arm
+    statistic = ~list(mean = \(x) mean(x, na.rm = TRUE)), # return the mean
+    fmt_fn = ~list(mean = 0) # format the result
+  ) |> 
+  apply_fmt_fn() # add a character column of rounded results
+```
+
+## {cards}: `ard_categorical()`
+
+```{r}
+#| message: true
+ADSL |> 
+  ard_categorical(
+    by = ARM,
+    variables = AGEGR1
+  ) |> 
+  dplyr::filter(stat_name %in% c("n", "p")) |> # keep most common stats 
+  print(n = 8)
+```
+
+::: {.small}
+
+_Any unobserved levels of the variables will be present in the resulting ARD._
+:::
+
+## {cards}: Other Summary Functions
+
+- `ard_hierarchical()`: similar to `ard_categorical()`, but built for nested tabulations, e.g. AE terms within SOC
+
+- `ard_dichotomous()`: similar to `ard_categorical()`, and tabulates a single value of the variable
+
+- `ard_complex()`: similar to `ard_continuous()`, but the summary functions can be more complex and accepts other arguments like the full and subsetted (within the by groups) data sets.
+
+- `ard_missing()`: tabulates rates of missingness
+
+The results from all these functions are entirely compatible with one another, and can be stacked into a single data frame.
+
+## {cards}: Other Functions
+
+In addition to exporting functions to prepare summaries, {cards} exports many utilities for wrangling ARDs and creating new ARDs.
+
+Construct: `bind_ard()`, `tidy_as_ard()`, `nest_for_ard()`, `check_ard_structure()`, and many more
+
+Wrangling: `shuffle_ard()`, `get_ard_statistics()`, `replace_null_statistic()`, etc.
+
+::: {.notes}
+
+- `tidy_as_ard()` is USED everywhere!
+
+:::

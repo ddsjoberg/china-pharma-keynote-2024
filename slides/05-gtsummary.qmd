@@ -1,0 +1,30 @@
+# {gtsummary} 
+
+## {gtsummary} R Package <a href="https://ddsjoberg.github.io/gtsummary/"><img src="https://ddsjoberg.github.io/gtsummary/logo.png" align="right" height="138" alt="gtsummary website" /></a>
+
+- Talk about the success of gtsummary
+
+  - most downloaded summary table package on CRAN
+  
+  - composable tables make it very popular. it makes it easy create bespoke tables
+  
+  - tables output to gt, flextable, huxtable, kableExtra, kable, and even tibbles/data frames. meaning that you can utilize any printing engine for your needed output type (each of them have their strengths)
+  
+## gtsummary+cards
+
+then move on to how {cards} and {gtsummary} can work together.
+
+- The {cards} package does not present results and this is where the {gtsummary} package shines.
+
+- The {gtsummary} package offers a modular framework to construct summary tables. 
+
+- The {gtsummary} package is the most widely used package for summary tables in the R ecosystem, and won the American Statistical Association’s 2021 award for Innovation in Statistical Programming and Analytics and it’s currently being refactored with a {cards} backend.
+
+## gtsummary+cards
+
+![](images/ard-gtsummary-workflow.png)
+
+## final slides
+
+How best to end this presentation?
+  

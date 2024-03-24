@@ -13,7 +13,6 @@ format:
     chalkboard: true
 execute:
   echo: true
-  output: asis
   freeze: auto
 cache: true
 ---
@@ -50,6 +49,10 @@ fa_fill <- "#606060"
 
 <!-- {{< include 02-ard.qmd >}} -->
 
-{{< include 03-cards.qmd >}}
+<!-- {{< include 03-cards.qmd >}} -->
+
+{{< include 04-cardx.qmd >}}
+
+{{< include 05-gtsummary.qmd >}}
 
 
