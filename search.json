@@ -1,54 +1,31 @@
 [
   {
-    "objectID": "slides/index.html#acknowledgements",
-    "href": "slides/index.html#acknowledgements",
+    "objectID": "slides/index.html#cards-1",
+    "href": "slides/index.html#cards-1",
     "title": "CDISC Analysis Results Data with {cards} + {gtsummary}",
-    "section": "Acknowledgements",
-    "text": "Acknowledgements\n\n\n\n\nThis work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA4.0)."
+    "section": "{cards} ",
+    "text": "{cards} \nlibrary(cards)\n\nard_continuous(ADSL, variables = AGE)\nvariable context stat_name stat_label stat fmt_fn 1 AGE continuo… N N 254 0 2 AGE continuo… mean Mean 75.087 1 3 AGE continuo… sd SD 8.246 1 4 AGE continuo… median Median 77 1 5 AGE continuo… p25 25th Per… 70 1 6 AGE continuo… p75 75th Per… 81 1 7 AGE continuo… min Min 51 1 8 AGE continuo… max Max 89 1\n\n\n\n\nCDISC Analysis Results Data with {cards}+{gtsummary}"
   },
   {
-    "objectID": "slides/index.html#蘇丹杰-daniel-d.-sjoberg",
-    "href": "slides/index.html#蘇丹杰-daniel-d.-sjoberg",
-    "title": "CDISC Analysis Results Data with {cards} + {gtsummary}",
-    "section": "蘇丹杰 (Daniel D. Sjoberg)",
-    "text": "蘇丹杰 (Daniel D. Sjoberg)\n\n\n\nSenior Principal Data Scientist at Genentech/Roche\n13+ years at Memorial Sloan Kettering Cancer Center as a Biostatistician\nPublished 250+ papers in peer-reviewed journals and served on Editorial Board of European Urology\nWritten and contributed to many R packages available on CRAN, R Universe, and GitHub.\n\n\n\n\n danieldsjoberg.com\n @ddsjoberg.bsky.social\n social/@ddsjoberg\n linkedin.com/in/ddsjoberg\n github.com/ddsjoberg"
-  },
-  {
-    "objectID": "slides/index.html#outline",
-    "href": "slides/index.html#outline",
-    "title": "CDISC Analysis Results Data with {cards} + {gtsummary}",
-    "section": "Outline",
-    "text": "Outline\n\n\n\nAnalysis Results Standard (ARS)\nAnalysis Results Data (ARD)\n{cards} + {cardx} R packages\n{gtsummary} R Package\n\n\n\n\n\n\nCDISC Analysis Results Data with {cards}+{gtsummary}"
-  },
-  {
-    "objectID": "material.html",
-    "href": "material.html",
-    "title": "Material",
+    "objectID": "slides/02-ard.html",
+    "href": "slides/02-ard.html",
+    "title": "Analysis Results Data",
     "section": "",
-    "text": "View slides in full screen",
-    "crumbs": [
-      "Materials"
-    ]
+    "text": "Encodes statistical analysis outcomes in a machine-readable format.\nPrimary objective is to streamline the processes of automation, ensuring reproducibility, promoting reusability, and enhancing traceability.\nThe ARD model specified how statistical results are saved into a structured format.\nThe ARD can be used to to subsequently create tables and figures.\n\n\n\n\n\nAfter the initial creation of an ARD, the results can later be re-used again and again for subsequent reporting needs.\n\n\n\n\n\n\n\n\nRe-creating a figure with only two of the three treatment arms shown, or pruning a large complex table to show only the most interesting results for a presentation (when the initial results may been prepared for regulatory purposes)."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "CDISC Analysis Results Data with {cards}+{gtsummary}",
+    "objectID": "slides/02-ard.html#analysis-results-data-ard",
+    "href": "slides/02-ard.html#analysis-results-data-ard",
+    "title": "Analysis Results Data",
     "section": "",
-    "text": "🗓️ March 29, 2024 | 09:15 - 09:45 CST\n🏨 Novartis Campus, Shanghai, China\n💥 Conference Registration (¥150)\n\n\nAbstract\nThe CDISC Analysis Results Data (ARD) Model is an emerging standard for encoding statistical analysis outcomes in a machine-readable format. Its primary objective is to streamline the processes of automation, ensuring reproducibility, promoting reusability, and enhancing traceability.\nThe {cards} R package offers a range of functions for ARD generation, from basic univariate summaries like means and tabulations to complex multivariable summaries encompassing regression models and statistical tests.\nThe package includes functionalities to represent results in various formats, including JSON and YAML. Thanks to its flexible structures, the {cards} package can be harnessed in diverse applications, such as generating tables for regulatory submissions and conducting quality control checks on existing tables. Furthermore, the {cards} ARD object can be accessed through a REST API, allowing writers to dynamically incorporate table results into reports.\nWhile {cards} calculates statistics and stores them in a structured object, it cannot present those results; this, however, is where the {gtsummary} package shines. The {gtsummary} package offers a modular framework to construct summary tables. It is the most widely used package for summary tables in the healthcare/pharmaceutical space, and won the American Statistical Association’s 2021 award for Innovation in Statistical Programming and Analytics. The {gtsummary} package is currently being refactored to utilize {cards} as its backend, which will allow users to both extract an ARD object from a {gtsummary} table and use an ARD object to construct a {gtsummary} table. The {cards} and {gtsummary} packages stand as robust and versatile tools, poised to assist in a multitude of analytical endeavors.\n\n\nPresenter\n\nDaniel D. Sjoberg (he/him) is a Senior Principal Data Scientist at Genentech. Previously, he was a Lead Data Science Manager at the Prostate Cancer Clinical Trials Consortium, and a Senior Biostatistician at Memorial Sloan Kettering Cancer Center in New York City. He enjoys R package development, creating many packages available on CRAN, R-Universe, and GitHub. His research interests include adaptive methods in clinical trials, precision medicine, and predictive modeling. Daniel is the winner of the 2021 American Statistical Association (ASA) Innovation in Statistical Programming and Analytics award.",
-    "crumbs": [
-      "Home"
-    ]
+    "text": "Encodes statistical analysis outcomes in a machine-readable format.\nPrimary objective is to streamline the processes of automation, ensuring reproducibility, promoting reusability, and enhancing traceability.\nThe ARD model specified how statistical results are saved into a structured format.\nThe ARD can be used to to subsequently create tables and figures."
   },
   {
-    "objectID": "license.html",
-    "href": "license.html",
-    "title": "License",
+    "objectID": "slides/02-ard.html#analysis-results-data-ard-1",
+    "href": "slides/02-ard.html#analysis-results-data-ard-1",
+    "title": "Analysis Results Data",
     "section": "",
-    "text": "This work is licensed under a Creative Commons Attribution 4.0 International License.",
-    "crumbs": [
-      "License"
-    ]
+    "text": "After the initial creation of an ARD, the results can later be re-used again and again for subsequent reporting needs.\n\n\n\n\n\n\n\n\nRe-creating a figure with only two of the three treatment arms shown, or pruning a large complex table to show only the most interesting results for a presentation (when the initial results may been prepared for regulatory purposes)."
   },
   {
     "objectID": "slides/00-setup.html",
@@ -77,5 +54,84 @@
     "title": "CDISC Analysis Results Data with {cards}+{gtsummary}",
     "section": "Outline",
     "text": "Outline\n\n\n\nAnalysis Results Standard (ARS)\nAnalysis Results Data (ARD)\n{cards} + {cardx} R packages\n{gtsummary} R Package"
+  },
+  {
+    "objectID": "license.html",
+    "href": "license.html",
+    "title": "License",
+    "section": "",
+    "text": "This work is licensed under a Creative Commons Attribution 4.0 International License.",
+    "crumbs": [
+      "License"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "CDISC Analysis Results Data with {cards}+{gtsummary}",
+    "section": "",
+    "text": "🗓️ March 29, 2024 | 09:15 - 09:45 CST\n🏨 Novartis Campus, Shanghai, China\n💥 Conference Registration (¥150)\n\n\nAbstract\nThe CDISC Analysis Results Data (ARD) Model is an emerging standard for encoding statistical analysis outcomes in a machine-readable format. Its primary objective is to streamline the processes of automation, ensuring reproducibility, promoting reusability, and enhancing traceability.\nThe {cards} R package offers a range of functions for ARD generation, from basic univariate summaries like means and tabulations to complex multivariable summaries encompassing regression models and statistical tests.\nThe package includes functionalities to represent results in various formats, including JSON and YAML. Thanks to its flexible structures, the {cards} package can be harnessed in diverse applications, such as generating tables for regulatory submissions and conducting quality control checks on existing tables. Furthermore, the {cards} ARD object can be accessed through a REST API, allowing writers to dynamically incorporate table results into reports.\nWhile {cards} calculates statistics and stores them in a structured object, it cannot present those results; this, however, is where the {gtsummary} package shines. The {gtsummary} package offers a modular framework to construct summary tables. It is the most widely used package for summary tables in the healthcare/pharmaceutical space, and won the American Statistical Association’s 2021 award for Innovation in Statistical Programming and Analytics. The {gtsummary} package is currently being refactored to utilize {cards} as its backend, which will allow users to both extract an ARD object from a {gtsummary} table and use an ARD object to construct a {gtsummary} table. The {cards} and {gtsummary} packages stand as robust and versatile tools, poised to assist in a multitude of analytical endeavors.\n\n\nPresenter\n\nDaniel D. Sjoberg (he/him) is a Senior Principal Data Scientist at Genentech. Previously, he was a Lead Data Science Manager at the Prostate Cancer Clinical Trials Consortium, and a Senior Biostatistician at Memorial Sloan Kettering Cancer Center in New York City. He enjoys R package development, creating many packages available on CRAN, R-Universe, and GitHub. His research interests include adaptive methods in clinical trials, precision medicine, and predictive modeling. Daniel is the winner of the 2021 American Statistical Association (ASA) Innovation in Statistical Programming and Analytics award.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "material.html",
+    "href": "material.html",
+    "title": "Material",
+    "section": "",
+    "text": "View slides in full screen",
+    "crumbs": [
+      "Materials"
+    ]
+  },
+  {
+    "objectID": "slides/01-ars.html",
+    "href": "slides/01-ars.html",
+    "title": "Analysis Results Standard",
+    "section": "",
+    "text": "Emerging standard for prospectively encoding statistical analysis reporting pipeline in a machine-readable format.\nPrimary objectives are to leverage analysis results metadata to drive the automation of results and support storage, access, processing, traceability and reproducibility of results.\nLogical model that describes analysis results and associated metadata.\nFocus on concepts, not layout, e.g. the summary statistics, not how the results are shown in a table.\nLearn more at https://www.cdisc.org/events/webinar/analysis-results-standard-public-review\n\n\n\n\nExample ARS Flow\n\n\n\n\n\n\n\nOverview of the meta data\n\nthe data sets\nthe exclusions (e.g. ITT population)\nI know the details here are sparse, but we need to get the meat of this presentation!\n\nOverview of ARD\n\nStructured object to save summary results\nCan be used for simply summary statistics or complex analyses\nWe can also save instructions formatting the results\n\nLastly, TLGs\n\nWe’re all familiar with the TLGs, I presume.\nThe ARS fills the gap between ADaM and TLGs\n\n\n\n\n\n\nExample ARS Flow\n\n\n\n\n\n\n\n{cards} helps us easily build analysis results data sets\n\nYES, THIS IS A DRAFT HEX STICKER\n\nafter the re-factor is complete, gtsummary will help us build tables from ARDs\n\n\n\n\n\n\nEncodes statistical analysis outcomes in a machine-readable format.\nPrimary objective is to streamline the processes of automation, ensuring reproducibility, promoting reusability, and enhancing traceability.\nThe ARD model specified how statistical results are saved into a structured format.\nThe ARD can be used to to subsequently create tables and figures.\nAfter the initial creation of an ARD, the results can later be re-used again and again for subsequent reporting needs; for example, re-creating a figure with only two of the three treatment arms shown, or pruning a large complex table to show only the most interesting results for a presentation (when the initial results may been prepared for regulatory purposes)."
+  },
+  {
+    "objectID": "slides/01-ars.html#analysis-results-standard-ars-1",
+    "href": "slides/01-ars.html#analysis-results-standard-ars-1",
+    "title": "Analysis Results Standard",
+    "section": "",
+    "text": "Emerging standard for prospectively encoding statistical analysis reporting pipeline in a machine-readable format.\nPrimary objectives are to leverage analysis results metadata to drive the automation of results and support storage, access, processing, traceability and reproducibility of results.\nLogical model that describes analysis results and associated metadata.\nFocus on concepts, not layout, e.g. the summary statistics, not how the results are shown in a table.\nLearn more at https://www.cdisc.org/events/webinar/analysis-results-standard-public-review"
+  },
+  {
+    "objectID": "slides/01-ars.html#analysis-results-standard-ars-2",
+    "href": "slides/01-ars.html#analysis-results-standard-ars-2",
+    "title": "Analysis Results Standard",
+    "section": "",
+    "text": "Example ARS Flow\n\n\n\n\n\n\n\nOverview of the meta data\n\nthe data sets\nthe exclusions (e.g. ITT population)\nI know the details here are sparse, but we need to get the meat of this presentation!\n\nOverview of ARD\n\nStructured object to save summary results\nCan be used for simply summary statistics or complex analyses\nWe can also save instructions formatting the results\n\nLastly, TLGs\n\nWe’re all familiar with the TLGs, I presume.\nThe ARS fills the gap between ADaM and TLGs"
+  },
+  {
+    "objectID": "slides/01-ars.html#analysis-results-standard-ars-3",
+    "href": "slides/01-ars.html#analysis-results-standard-ars-3",
+    "title": "Analysis Results Standard",
+    "section": "",
+    "text": "Example ARS Flow\n\n\n\n\n\n\n\n{cards} helps us easily build analysis results data sets\n\nYES, THIS IS A DRAFT HEX STICKER\n\nafter the re-factor is complete, gtsummary will help us build tables from ARDs"
+  },
+  {
+    "objectID": "slides/01-ars.html#analysis-results-data-ard",
+    "href": "slides/01-ars.html#analysis-results-data-ard",
+    "title": "Analysis Results Standard",
+    "section": "",
+    "text": "Encodes statistical analysis outcomes in a machine-readable format.\nPrimary objective is to streamline the processes of automation, ensuring reproducibility, promoting reusability, and enhancing traceability.\nThe ARD model specified how statistical results are saved into a structured format.\nThe ARD can be used to to subsequently create tables and figures.\nAfter the initial creation of an ARD, the results can later be re-used again and again for subsequent reporting needs; for example, re-creating a figure with only two of the three treatment arms shown, or pruning a large complex table to show only the most interesting results for a presentation (when the initial results may been prepared for regulatory purposes)."
+  },
+  {
+    "objectID": "slides/03-cards.html",
+    "href": "slides/03-cards.html",
+    "title": "{cards}",
+    "section": "",
+    "text": "library(cards)\n\nard_continuous(ADSL, variables = AGE)\n\n{cards} data frame: 8 x 8\n\n\n  variable   context stat_name stat_label   stat fmt_fn\n1      AGE continuo…         N          N    254      0\n2      AGE continuo…      mean       Mean 75.087      1\n3      AGE continuo…        sd         SD  8.246      1\n4      AGE continuo…    median     Median     77      1\n5      AGE continuo…       p25  25th Per…     70      1\n6      AGE continuo…       p75  75th Per…     81      1\n7      AGE continuo…       min        Min     51      1\n8      AGE continuo…       max        Max     89      1\n\n\nℹ 2 more variables: warning, error"
+  },
+  {
+    "objectID": "slides/03-cards.html#cards-1",
+    "href": "slides/03-cards.html#cards-1",
+    "title": "{cards}",
+    "section": "",
+    "text": "library(cards)\n\nard_continuous(ADSL, variables = AGE)\n\n{cards} data frame: 8 x 8\n\n\n  variable   context stat_name stat_label   stat fmt_fn\n1      AGE continuo…         N          N    254      0\n2      AGE continuo…      mean       Mean 75.087      1\n3      AGE continuo…        sd         SD  8.246      1\n4      AGE continuo…    median     Median     77      1\n5      AGE continuo…       p25  25th Per…     70      1\n6      AGE continuo…       p75  75th Per…     81      1\n7      AGE continuo…       min        Min     51      1\n8      AGE continuo…       max        Max     89      1\n\n\nℹ 2 more variables: warning, error"
   }
 ]
