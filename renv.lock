@@ -273,9 +273,14 @@
     },
     "cards": {
       "Package": "cards",
-      "Version": "0.1.0",
-      "Source": "Repository",
-      "Repository": "CRAN",
+      "Version": "0.1.0.9008",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "insightsengineering",
+      "RemoteRepo": "cards",
+      "RemoteRef": "main",
+      "RemoteSha": "9177db996c20451c30dd6a2c4ac7e2b0d7380147",
       "Requirements": [
         "R",
         "cli",
@@ -285,13 +290,19 @@
         "tidyr",
         "tidyselect"
       ],
-      "Hash": "9c4837e8ea64efc048919647b2a23041"
+      "Hash": "26d62414b5a1613e9bfc6dfa4f6e3797"
     },
     "cardx": {
       "Package": "cardx",
-      "Version": "0.1.0",
-      "Source": "Repository",
-      "Repository": "CRAN",
+      "Version": "0.1.0.9005",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "insightsengineering",
+      "RemoteRepo": "cardx",
+      "RemoteRef": "main",
+      "RemoteSha": "88cf1a9c6d7bc81fc2d27d0425f0be0baba8695f",
+      "Remotes": "insightsengineering/cards",
       "Requirements": [
         "R",
         "cards",
@@ -301,7 +312,7 @@
         "rlang",
         "tidyr"
       ],
-      "Hash": "40c622874954d822d123922b9708ec5a"
+      "Hash": "2f413754d094ec0c6306ed1f77bda961"
     },
     "cellranger": {
       "Package": "cellranger",
@@ -314,6 +325,19 @@
         "tibble"
       ],
       "Hash": "f61dbaec772ccd2e17705c1e872e9e7c"
+    },
+    "class": {
+      "Package": "class",
+      "Version": "7.3-22",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "MASS",
+        "R",
+        "stats",
+        "utils"
+      ],
+      "Hash": "f91f6b29f38b8c280f2b9477787d4bb2"
     },
     "cli": {
       "Package": "cli",
@@ -493,6 +517,22 @@
         "vctrs"
       ],
       "Hash": "54ed3ea01b11e81a86544faaecfef8e2"
+    },
+    "e1071": {
+      "Package": "e1071",
+      "Version": "1.7-14",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "class",
+        "grDevices",
+        "graphics",
+        "methods",
+        "proxy",
+        "stats",
+        "utils"
+      ],
+      "Hash": "4ef372b716824753719a8a38b258442d"
     },
     "ellipsis": {
       "Package": "ellipsis",
@@ -1185,6 +1225,18 @@
         "prettyunits"
       ],
       "Hash": "f4625e061cb2865f111b47ff163a5ca6"
+    },
+    "proxy": {
+      "Package": "proxy",
+      "Version": "0.4-27",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "stats",
+        "utils"
+      ],
+      "Hash": "e0ef355c12942cf7a6b91a6cfaea8b3e"
     },
     "ps": {
       "Package": "ps",
