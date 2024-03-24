@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -169,16 +135,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#cards" id="toc-cards" class="nav-link active" data-scroll-target="#cards">{cards}</a>
+  <li><a href="#gtsummary" id="toc-gtsummary" class="nav-link active" data-scroll-target="#gtsummary">{gtsummary}</a>
   <ul class="collapse">
-  <li><a href="#cards-r-package" id="toc-cards-r-package" class="nav-link" data-scroll-target="#cards-r-package">{cards} R Package </a><a href="https://insightsengineering.github.io/cards/" class="nav-link" data-scroll-target="https\://insightsengineering.github.io/cards/"><img src="https://insightsengineering.github.io/cards/latest-tag/logo.png" align="right" height="138" alt="cards website"></a></li>
-  <li><a href="#cards-ard_continuous-arguments" id="toc-cards-ard_continuous-arguments" class="nav-link" data-scroll-target="#cards-ard_continuous-arguments">{cards}: <code>ard_continuous()</code> arguments</a></li>
-  <li><a href="#cards-ard_categorical" id="toc-cards-ard_categorical" class="nav-link" data-scroll-target="#cards-ard_categorical">{cards}: <code>ard_categorical()</code></a></li>
-  <li><a href="#cards-other-summary-functions" id="toc-cards-other-summary-functions" class="nav-link" data-scroll-target="#cards-other-summary-functions">{cards}: Other Summary Functions</a></li>
-  <li><a href="#cards-other-functions" id="toc-cards-other-functions" class="nav-link" data-scroll-target="#cards-other-functions">{cards}: Other Functions</a></li>
+  <li><a href="#gtsummary-r-package" id="toc-gtsummary-r-package" class="nav-link" data-scroll-target="#gtsummary-r-package">{gtsummary} R Package </a><a href="https://ddsjoberg.github.io/gtsummary/" class="nav-link" data-scroll-target="https\://ddsjoberg.github.io/gtsummary/"><img src="https://ddsjoberg.github.io/gtsummary/logo.png" align="right" height="138" alt="gtsummary website"></a></li>
+  <li><a href="#gtsummarycards" id="toc-gtsummarycards" class="nav-link" data-scroll-target="#gtsummarycards">gtsummary+cards</a></li>
+  <li><a href="#gtsummarycards-1" id="toc-gtsummarycards-1" class="nav-link" data-scroll-target="#gtsummarycards-1">gtsummary+cards</a></li>
+  <li><a href="#final-slides" id="toc-final-slides" class="nav-link" data-scroll-target="#final-slides">final slides</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/ddsjoberg/china-pharma-keynote-2024/edit/main/slides/03-cards.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ddsjoberg/china-pharma-keynote-2024/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/ddsjoberg/china-pharma-keynote-2024/edit/main/slides/05-gtsummary.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ddsjoberg/china-pharma-keynote-2024/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -186,133 +151,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="cards" class="level1">
-<h1>{cards}</h1>
-<section id="cards-r-package" class="level2">
-<h2 class="anchored" data-anchor-id="cards-r-package">{cards} R Package <a href="https://insightsengineering.github.io/cards/"><img src="https://insightsengineering.github.io/cards/latest-tag/logo.png" align="right" height="138" alt="cards website"></a></h2>
-<p>Let’s check out a simple example</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(cards)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># create ARD with default summary statistics</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ard_continuous</span>(ADSL, <span class="at">variables =</span> AGE)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>{cards} data frame: 8 x 8</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>  variable   context stat_name stat_label   stat fmt_fn
-1      AGE continuo…         N          N    254      0
-2      AGE continuo…      mean       Mean 75.087      1
-3      AGE continuo…        sd         SD  8.246      1
-4      AGE continuo…    median     Median     77      1
-5      AGE continuo…       p25  25th Per…     70      1
-6      AGE continuo…       p75  75th Per…     81      1
-7      AGE continuo…       min        Min     51      1
-8      AGE continuo…       max        Max     89      1</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>ℹ 2 more variables: warning, error</code></pre>
-</div>
-</div>
-<div class="notes">
+<section id="gtsummary" class="level1">
+<h1>{gtsummary}</h1>
+<section id="gtsummary-r-package" class="level2">
+<h2 class="anchored" data-anchor-id="gtsummary-r-package">{gtsummary} R Package <a href="https://ddsjoberg.github.io/gtsummary/"><img src="https://ddsjoberg.github.io/gtsummary/logo.png" align="right" height="138" alt="gtsummary website"></a></h2>
 <ul>
-<li><p>one line per statistic</p></li>
-<li><p>includes default set of summary statistics</p></li>
-<li><p>default formatting function (in this case, the integer is shortcut to format/round to 1 decimal place)</p></li>
-<li><p>a simple data frame result, which means it is easy to work with a modify</p></li>
-</ul>
-</div>
-</section>
-<section id="cards-ard_continuous-arguments" class="level2">
-<h2 class="anchored" data-anchor-id="cards-ard_continuous-arguments">{cards}: <code>ard_continuous()</code> arguments</h2>
-<div class="small">
+<li><p>Talk about the success of gtsummary</p>
 <ul>
-<li><p><code>by</code>: summary statistics are calculated by all combinations of the by variables, including unobserved factor levels</p></li>
-<li><p><code>statistic</code>: specify univariate summary statistics. Accepts <em>any</em> function, base R, from a package, or user-defined.</p></li>
-<li><p><code>fmt_fn</code>: Override the default formatting functions, e.g.&nbsp;when you need</p></li>
+<li><p>most downloaded summary table package on CRAN</p></li>
+<li><p>composable tables make it very popular. it makes it easy create bespoke tables</p></li>
+<li><p>tables output to gt, flextable, huxtable, kableExtra, kable, and even tibbles/data frames. meaning that you can utilize any printing engine for your needed output type (each of them have their strengths)</p></li>
+</ul></li>
 </ul>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>ADSL <span class="sc">|&gt;</span> </span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ard_continuous</span>(</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">variables =</span> AGE,</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">by =</span> ARM, <span class="co"># calculate summary stats by treatment arm</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">statistic =</span> <span class="sc">~</span><span class="fu">list</span>(<span class="at">mean =</span> \(x) <span class="fu">mean</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)), <span class="co"># return the mean</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">fmt_fn =</span> <span class="sc">~</span><span class="fu">list</span>(<span class="at">mean =</span> <span class="dv">0</span>) <span class="co"># format the result</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span> </span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">apply_fmt_fn</span>() <span class="co"># add a character column of rounded results</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>{cards} data frame: 3 x 11</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>  group1 group1_level variable stat_name stat_label   stat stat_fmt
-1    ARM      Placebo      AGE      mean       Mean 75.209       75
-2    ARM    Xanomeli…      AGE      mean       Mean 74.381       74
-3    ARM    Xanomeli…      AGE      mean       Mean 75.667       76</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>ℹ 4 more variables: context, fmt_fn, warning, error</code></pre>
-</div>
-</div>
 </section>
-<section id="cards-ard_categorical" class="level2">
-<h2 class="anchored" data-anchor-id="cards-ard_categorical">{cards}: <code>ard_categorical()</code></h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>ADSL <span class="sc">|&gt;</span> </span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ard_categorical</span>(</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">by =</span> ARM,</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">variables =</span> AGEGR1</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span> </span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(stat_name <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"n"</span>, <span class="st">"p"</span>)) <span class="sc">|&gt;</span> <span class="co"># keep most common stats </span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="at">n =</span> <span class="dv">8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>{cards} data frame: 18 x 11</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>  group1 group1_level variable variable_level stat_name stat_label  stat
-1    ARM      Placebo   AGEGR1            &lt;65         n          n    14
-2    ARM      Placebo   AGEGR1            &lt;65         p          % 0.163
-3    ARM    Xanomeli…   AGEGR1            &lt;65         n          n    11
-4    ARM    Xanomeli…   AGEGR1            &lt;65         p          % 0.131
-5    ARM    Xanomeli…   AGEGR1            &lt;65         n          n     8
-6    ARM    Xanomeli…   AGEGR1            &lt;65         p          % 0.095
-7    ARM      Placebo   AGEGR1            &gt;80         n          n    30
-8    ARM      Placebo   AGEGR1            &gt;80         p          % 0.349</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>ℹ 10 more rows</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>ℹ Use `print(n = ...)` to see more rows</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>ℹ 4 more variables: context, fmt_fn, warning, error</code></pre>
-</div>
-</div>
-<div class="small">
-<p><em>Any unobserved levels of the variables will be present in the resulting ARD.</em></p>
-</div>
-</section>
-<section id="cards-other-summary-functions" class="level2">
-<h2 class="anchored" data-anchor-id="cards-other-summary-functions">{cards}: Other Summary Functions</h2>
+<section id="gtsummarycards" class="level2">
+<h2 class="anchored" data-anchor-id="gtsummarycards">gtsummary+cards</h2>
+<p>then move on to how {cards} and {gtsummary} can work together.</p>
 <ul>
-<li><p><code>ard_hierarchical()</code>: similar to <code>ard_categorical()</code>, but built for nested tabulations, e.g.&nbsp;AE terms within SOC</p></li>
-<li><p><code>ard_dichotomous()</code>: similar to <code>ard_categorical()</code>, and tabulates a single value of the variable</p></li>
-<li><p><code>ard_complex()</code>: similar to <code>ard_continuous()</code>, but the summary functions can be more complex and accepts other arguments like the full and subsetted (within the by groups) data sets.</p></li>
-<li><p><code>ard_missing()</code>: tabulates rates of missingness</p></li>
+<li><p>The {cards} package does not present results and this is where the {gtsummary} package shines.</p></li>
+<li><p>The {gtsummary} package offers a modular framework to construct summary tables.</p></li>
+<li><p>The {gtsummary} package is the most widely used package for summary tables in the R ecosystem, and won the American Statistical Association’s 2021 award for Innovation in Statistical Programming and Analytics and it’s currently being refactored with a {cards} backend.</p></li>
 </ul>
-<p>The results from all these functions are entirely compatible with one another, and can be stacked into a single data frame.</p>
 </section>
-<section id="cards-other-functions" class="level2">
-<h2 class="anchored" data-anchor-id="cards-other-functions">{cards}: Other Functions</h2>
-<p>In addition to exporting functions to prepare summaries, {cards} exports many utilities for wrangling ARDs and creating new ARDs.</p>
-<p>Construct: <code>bind_ard()</code>, <code>tidy_as_ard()</code>, <code>nest_for_ard()</code>, <code>check_ard_structure()</code>, and many more</p>
-<p>Wrangling: <code>shuffle_ard()</code>, <code>get_ard_statistics()</code>, <code>replace_null_statistic()</code>, etc.</p>
-<div class="notes">
-<ul>
-<li><code>tidy_as_ard()</code> is USED everywhere!</li>
-</ul>
-</div>
+<section id="gtsummarycards-1" class="level2">
+<h2 class="anchored" data-anchor-id="gtsummarycards-1">gtsummary+cards</h2>
+<p><img src="images/ard-gtsummary-workflow.png" class="img-fluid"></p>
+</section>
+<section id="final-slides" class="level2">
+<h2 class="anchored" data-anchor-id="final-slides">final slides</h2>
+<p>How best to end this presentation?</p>
 
 
 </section>
@@ -736,7 +603,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ddsjoberg/china-pharma-keynote-2024/edit/main/slides/03-cards.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ddsjoberg/china-pharma-keynote-2024/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ddsjoberg/china-pharma-keynote-2024/edit/main/slides/05-gtsummary.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ddsjoberg/china-pharma-keynote-2024/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

@@ -405,24 +405,477 @@ Daniel D. Sjoberg
 </div>
 
 </section>
+<section>
 <section id="introduction" class="title-slide slide level1 center">
 <h1>Introduction</h1>
-<!-- {{< include 00-setup.qmd >}} -->
-<!-- {{< include 01-ars.qmd >}} -->
-<!-- {{< include 02-ard.qmd >}} -->
-</section>
 
+</section>
+<section id="acknowledgements" class="slide level2">
+<h2>Acknowledgements</h2>
+<div class="columns v-center-container">
+<div class="column" style="width:60%;">
+<p><img src="images/v1-gtsummary-cards-cardx-HexSticker.png" alt="drawing" width="70%"></p>
+</div><div class="column" style="width:40%;">
+<p>This work is licensed under a <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a> (CC BY-SA4.0).</p>
+</div>
+</div>
+</section>
+<section id="蘇丹杰-daniel-d.-sjoberg" class="slide level2">
+<h2>蘇丹杰 (Daniel D. Sjoberg)</h2>
+<div class="columns v-center-container">
+<div class="column" style="width:60%;">
+<ul>
+<li><p>Senior Principal Data Scientist at Genentech/Roche</p></li>
+<li><p>13+ years at Memorial Sloan Kettering Cancer Center as a Biostatistician</p></li>
+<li><p>Published 250+ papers in peer-reviewed journals and served on Editorial Board of European Urology</p></li>
+<li><p>Written and contributed to many R packages available on CRAN, R Universe, and GitHub.</p></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<div class="small">
+<p><img data-src="images/dan-circle.png"></p>
+<p><svg aria-hidden="true" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#606060;overflow:visible;position:relative;"><path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"></path></svg> <a href="https://www.danieldsjoberg.com/">danieldsjoberg.com</a></p>
+<p><svg aria-hidden="true" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#606060;overflow:visible;position:relative;"><path d="M0 336c0 79.5 64.5 144 144 144H512c70.7 0 128-57.3 128-128c0-61.9-44-113.6-102.4-125.4c4.1-10.7 6.4-22.4 6.4-34.6c0-53-43-96-96-96c-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32C167.6 32 96 103.6 96 192c0 2.7 .1 5.4 .2 8.1C40.2 219.8 0 273.2 0 336z"></path></svg> <a href="https://bsky.app/profile/ddsjoberg.bsky.social">@ddsjoberg.bsky.social</a></p>
+<p><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#606060;overflow:visible;position:relative;"><path d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"></path></svg> <a href="https://mastodon.social/@ddsjoberg">social/@ddsjoberg</a></p>
+<p><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#606060;overflow:visible;position:relative;"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg> <a href="https://www.linkedin.com/in/ddsjoberg/">linkedin.com/in/ddsjoberg</a></p>
+<p><svg aria-hidden="true" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#606060;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg> <a href="https://github.com/ddsjoberg/">github.com/ddsjoberg</a></p>
+</div>
+</div>
+</div>
+</section>
+<section id="outline" class="slide level2">
+<h2>Outline</h2>
+<div class="larger">
+<p><br></p>
+<ul>
+<li><p>Analysis Results Standard (ARS)</p></li>
+<li><p>Analysis Results Data (ARD)</p></li>
+<li><p>{cards} + {cardx} R packages</p></li>
+<li><p>{gtsummary} R Package</p></li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="analysis-results-standard" class="title-slide slide level1 center">
+<h1>Analysis Results Standard</h1>
+
+</section>
+<section id="analysis-results-standard-ars" class="slide level2">
+<h2>Analysis Results Standard (ARS)</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/ars-flow.png" class="fragment quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/ars-objectives.png" class="fragment quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</section>
+<section id="analysis-results-standard-ars-1" class="slide level2">
+<h2>Analysis Results Standard (ARS)</h2>
+<ul>
+<li><p>Emerging standard for <strong>prospectively</strong> encoding statistical analysis reporting pipeline in a machine-readable format.</p></li>
+<li><p>Primary objectives are to leverage analysis results metadata to drive the automation of results and support storage, access, processing, traceability and reproducibility of results.</p></li>
+<li><p>Logical model that describes analysis results and associated metadata.</p></li>
+<li><p>Focus on concepts, <em>not layout</em>, e.g.&nbsp;the summary statistics, not how the results are shown in a table.</p></li>
+<li><p>Learn more at <a href="https://www.cdisc.org/events/webinar/analysis-results-standard-public-review">https://www.cdisc.org/events/webinar/analysis-results-standard-public-review</a></p></li>
+</ul>
+</section>
+<section id="analysis-results-standard-ars-2" class="slide level2">
+<h2>Analysis Results Standard (ARS)</h2>
+<p>Example ARS Flow</p>
+
+<img data-src="images/ars-example-flow.png" class="quarto-figure quarto-figure-center r-stretch"><aside class="notes">
+<ul>
+<li><p>Overview of the meta data</p>
+<ul>
+<li><p>the data sets</p></li>
+<li><p>the exclusions (e.g.&nbsp;ITT population)</p></li>
+<li><p>I know the details here are sparse, but we need to get the meat of this presentation!</p></li>
+</ul></li>
+<li><p>Overview of ARD</p>
+<ul>
+<li><p>Structured object to save summary results</p></li>
+<li><p>Can be used for simply summary statistics or complex analyses</p></li>
+<li><p>We can also save instructions formatting the results</p></li>
+</ul></li>
+<li><p>Lastly, TLGs</p>
+<ul>
+<li><p>We’re all familiar with the TLGs, I presume.</p></li>
+<li><p>The ARS fills the gap between ADaM and TLGs</p></li>
+</ul></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="analysis-results-standard-ars-3" class="slide level2">
+<h2>Analysis Results Standard (ARS)</h2>
+<p>Example ARS Flow</p>
+
+<img data-src="images/ars-example-flow-with-hex.png" class="quarto-figure quarto-figure-center r-stretch"><aside class="notes">
+<ul>
+<li><p>{cards} helps us easily build analysis results data sets</p>
+<ul>
+<li>YES, THIS IS A DRAFT HEX STICKER</li>
+</ul></li>
+<li><p>after the re-factor is complete, gtsummary will help us build tables from ARDs</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="analysis-results-data-ard" class="slide level2">
+<h2>Analysis Results Data (ARD)</h2>
+<ul>
+<li><p>Encodes statistical analysis outcomes in a machine-readable format.</p></li>
+<li><p>Primary objective is to streamline the processes of automation, ensuring reproducibility, promoting reusability, and enhancing traceability.</p></li>
+<li><p>The ARD model specified how statistical results are saved into a structured format.</p></li>
+<li><p>The ARD can be used to to subsequently create tables and figures.</p></li>
+<li><p>After the initial creation of an ARD, the results can later be re-used again and again for subsequent reporting needs; for example, re-creating a figure with only two of the three treatment arms shown, or pruning a large complex table to show only the most interesting results for a presentation (when the initial results may been prepared for regulatory purposes).</p></li>
+</ul>
+</section></section>
+<section>
+<section id="analysis-results-data" class="title-slide slide level1 center">
+<h1>Analysis Results Data</h1>
+
+</section>
+<section id="analysis-results-data-ard-1" class="slide level2">
+<h2>Analysis Results Data (ARD)</h2>
+<ul>
+<li><p>Encodes statistical analysis outcomes in a machine-readable format.</p></li>
+<li><p>Primary objective is to streamline the processes of automation, ensuring reproducibility, promoting reusability, and enhancing traceability.</p></li>
+<li><p>The ARD model specified how statistical results are saved into a structured format.</p></li>
+<li><p>The ARD can be used to to subsequently create tables and figures.</p></li>
+</ul>
+</section>
+<section id="analysis-results-data-ard-2" class="slide level2">
+<h2>Analysis Results Data (ARD)</h2>
+<ul>
+<li>After the initial creation of an ARD, the results can later be re-used again and again for subsequent reporting needs.</li>
+</ul>
+
+<img data-src="images/ard-flow.png" class="quarto-figure quarto-figure-center r-stretch"><aside class="notes">
+<ul>
+<li>Re-creating a figure with only two of the three treatment arms shown, or pruning a large complex table to show only the most interesting results for a presentation (when the initial results may been prepared for regulatory purposes).</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
 <section>
 <section id="cards" class="title-slide slide level1 center">
 <h1>{cards}</h1>
 
 </section>
-<section id="cards-1" class="slide level2">
-<h2>{cards} <a href="https://insightsengineering.github.io/cards/"><img src="https://insightsengineering.github.io/cards/latest-tag/logo.png" align="right" height="138" alt="cards website"></a></h2>
+<section id="cards-r-package" class="slide level2">
+<h2>{cards} R Package <a href="https://insightsengineering.github.io/cards/"><img src="https://insightsengineering.github.io/cards/latest-tag/logo.png" align="right" height="138" alt="cards website"></a></h2>
+<p>Let’s check out a simple example</p>
+<div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(cards)</span>
 <span id="cb1-2"><a></a></span>
-<span id="cb1-3"><a></a><span class="fu">ard_continuous</span>(ADSL, <span class="at">variables =</span> AGE)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>variable context stat_name stat_label stat fmt_fn 1 AGE continuo… N N 254 0 2 AGE continuo… mean Mean 75.087 1 3 AGE continuo… sd SD 8.246 1 4 AGE continuo… median Median 77 1 5 AGE continuo… p25 25th Per… 70 1 6 AGE continuo… p75 75th Per… 81 1 7 AGE continuo… min Min 51 1 8 AGE continuo… max Max 89 1</p>
+<span id="cb1-3"><a></a><span class="co"># create ARD with default summary statistics</span></span>
+<span id="cb1-4"><a></a><span class="fu">ard_continuous</span>(ADSL, <span class="at">variables =</span> AGE)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>{cards} data frame: 8 x 8</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  variable   context stat_name stat_label   stat fmt_fn
+1      AGE continuo…         N          N    254      0
+2      AGE continuo…      mean       Mean 75.087      1
+3      AGE continuo…        sd         SD  8.246      1
+4      AGE continuo…    median     Median     77      1
+5      AGE continuo…       p25  25th Per…     70      1
+6      AGE continuo…       p75  75th Per…     81      1
+7      AGE continuo…       min        Min     51      1
+8      AGE continuo…       max        Max     89      1</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>ℹ 2 more variables: warning, error</code></pre>
+</div>
+</div>
+<aside class="notes">
+<ul>
+<li><p>one line per statistic</p></li>
+<li><p>includes default set of summary statistics</p></li>
+<li><p>default formatting function (in this case, the integer is shortcut to format/round to 1 decimal place)</p></li>
+<li><p>a simple data frame result, which means it is easy to work with a modify</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="cards-ard_continuous-arguments" class="slide level2">
+<h2>{cards}: <code>ard_continuous()</code> arguments</h2>
+<div class="small">
+<ul>
+<li><p><code>by</code>: summary statistics are calculated by all combinations of the by variables, including unobserved factor levels</p></li>
+<li><p><code>statistic</code>: specify univariate summary statistics. Accepts <em>any</em> function, base R, from a package, or user-defined.</p></li>
+<li><p><code>fmt_fn</code>: Override the default formatting functions, e.g.&nbsp;when you need</p></li>
+</ul>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>ADSL <span class="sc">|&gt;</span> </span>
+<span id="cb5-2"><a></a>  <span class="fu">ard_continuous</span>(</span>
+<span id="cb5-3"><a></a>    <span class="at">variables =</span> AGE,</span>
+<span id="cb5-4"><a></a>    <span class="at">by =</span> ARM, <span class="co"># calculate summary stats by treatment arm</span></span>
+<span id="cb5-5"><a></a>    <span class="at">statistic =</span> <span class="sc">~</span><span class="fu">list</span>(<span class="at">mean =</span> \(x) <span class="fu">mean</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)), <span class="co"># return the mean</span></span>
+<span id="cb5-6"><a></a>    <span class="at">fmt_fn =</span> <span class="sc">~</span><span class="fu">list</span>(<span class="at">mean =</span> <span class="dv">0</span>) <span class="co"># format the result</span></span>
+<span id="cb5-7"><a></a>  ) <span class="sc">|&gt;</span> </span>
+<span id="cb5-8"><a></a>  <span class="fu">apply_fmt_fn</span>() <span class="co"># add a character column of rounded results</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>{cards} data frame: 3 x 11</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  group1 group1_level variable stat_name stat_label   stat stat_fmt
+1    ARM      Placebo      AGE      mean       Mean 75.209       75
+2    ARM    Xanomeli…      AGE      mean       Mean 74.381       74
+3    ARM    Xanomeli…      AGE      mean       Mean 75.667       76</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>ℹ 4 more variables: context, fmt_fn, warning, error</code></pre>
+</div>
+</div>
+</section>
+<section id="cards-ard_categorical" class="slide level2">
+<h2>{cards}: <code>ard_categorical()</code></h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>ADSL <span class="sc">|&gt;</span> </span>
+<span id="cb9-2"><a></a>  <span class="fu">ard_categorical</span>(</span>
+<span id="cb9-3"><a></a>    <span class="at">by =</span> ARM,</span>
+<span id="cb9-4"><a></a>    <span class="at">variables =</span> AGEGR1</span>
+<span id="cb9-5"><a></a>  ) <span class="sc">|&gt;</span> </span>
+<span id="cb9-6"><a></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(stat_name <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"n"</span>, <span class="st">"p"</span>)) <span class="sc">|&gt;</span> <span class="co"># keep most common stats </span></span>
+<span id="cb9-7"><a></a>  <span class="fu">print</span>(<span class="at">n =</span> <span class="dv">8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>{cards} data frame: 18 x 11</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  group1 group1_level variable variable_level stat_name stat_label  stat
+1    ARM      Placebo   AGEGR1            &lt;65         n          n    14
+2    ARM      Placebo   AGEGR1            &lt;65         p          % 0.163
+3    ARM    Xanomeli…   AGEGR1            &lt;65         n          n    11
+4    ARM    Xanomeli…   AGEGR1            &lt;65         p          % 0.131
+5    ARM    Xanomeli…   AGEGR1            &lt;65         n          n     8
+6    ARM    Xanomeli…   AGEGR1            &lt;65         p          % 0.095
+7    ARM      Placebo   AGEGR1            &gt;80         n          n    30
+8    ARM      Placebo   AGEGR1            &gt;80         p          % 0.349</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>ℹ 10 more rows</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>ℹ Use `print(n = ...)` to see more rows</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>ℹ 4 more variables: context, fmt_fn, warning, error</code></pre>
+</div>
+</div>
+<div class="small">
+<p><em>Any unobserved levels of the variables will be present in the resulting ARD.</em></p>
+</div>
+</section>
+<section id="cards-other-summary-functions" class="slide level2">
+<h2>{cards}: Other Summary Functions</h2>
+<ul>
+<li><p><code>ard_hierarchical()</code>: similar to <code>ard_categorical()</code>, but built for nested tabulations, e.g.&nbsp;AE terms within SOC</p></li>
+<li><p><code>ard_dichotomous()</code>: similar to <code>ard_categorical()</code>, and tabulates a single value of the variable</p></li>
+<li><p><code>ard_complex()</code>: similar to <code>ard_continuous()</code>, but the summary functions can be more complex and accepts other arguments like the full and subsetted (within the by groups) data sets.</p></li>
+<li><p><code>ard_missing()</code>: tabulates rates of missingness</p></li>
+</ul>
+<p>The results from all these functions are entirely compatible with one another, and can be stacked into a single data frame.</p>
+</section>
+<section id="cards-other-functions" class="slide level2">
+<h2>{cards}: Other Functions</h2>
+<p>In addition to exporting functions to prepare summaries, {cards} exports many utilities for wrangling ARDs and creating new ARDs.</p>
+<p>Construct: <code>bind_ard()</code>, <code>tidy_as_ard()</code>, <code>nest_for_ard()</code>, <code>check_ard_structure()</code>, and many more</p>
+<p>Wrangling: <code>shuffle_ard()</code>, <code>get_ard_statistics()</code>, <code>replace_null_statistic()</code>, etc.</p>
+<aside class="notes">
+<ul>
+<li><code>tidy_as_ard()</code> is USED everywhere!</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="cardx" class="title-slide slide level1 center">
+<h1>{cardx}</h1>
+
+</section>
+<section id="cardx-r-package" class="slide level2">
+<h2>{cardx} R Package <a href="https://insightsengineering.github.io/cardx/"><img src="https://insightsengineering.github.io/cardx/latest-tag/logo.png" align="right" height="138" alt="cardx website"></a></h2>
+<ul>
+<li><p>While {cards} performs basic (and very common) summaries, {cardx} exports <code>ard_*()</code> functions for more complex analytic results.</p></li>
+<li><p>The list is growing, but we have functions for t-tests, Wilcoxon tests, standardized mean differences, ANOVA (including repeated measures), survey methods, confidence intervals for proportions and centrality estimates, and more.</p></li>
+<li><p>Elegant solution for nearly every regression model type in the R ecosystem, where we can identify regression types (linear, logistic, Cox, etc.), identify the underlying variable names for categorical variables (different from the model terms), identify reference groups for categorical variables, and much much more.</p></li>
+</ul>
+<aside class="notes">
+<p>Yes, this is also a draft hex sticker!</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="cardx-1" class="slide level2">
+<h2>{cardx}</h2>
+<p>Supported regression model types include:</p>
+<div class="small">
+<p><code>betareg::betareg()</code>, <code>biglm::bigglm()</code>, <code>biglmm::bigglm()</code>, <code>brms::brm()</code>, <code>cmprsk::crr()</code>, <code>fixest::feglm()</code>, <code>fixest::femlm()</code>, <code>fixest::feNmlm()</code>, <code>fixest::feols()</code>, <code>gam::gam()</code>, <code>geepack::geeglm()</code>, <code>glmmTMB::glmmTMB()</code>, <code>lavaan::lavaan()</code>, <code>lfe::felm()</code>, <code>lme4::glmer.nb()</code>, <code>lme4::glmer()</code>, <code>lme4::lmer()</code>, <code>logitr::logitr()</code>, <code>MASS::glm.nb()</code>, <code>MASS::polr()</code>, <code>mgcv::gam()</code>, <code>mice::mira</code>, <code>mmrm::mmrm()</code>, <code>multgee::nomLORgee()</code>, <code>multgee::ordLORgee()</code>, <code>nnet::multinom()</code>, <code>ordinal::clm()</code>, <code>ordinal::clmm()</code>, <code>parsnip::model_fit</code>, <code>plm::plm()</code>, <code>pscl::hurdle()</code>, <code>pscl::zeroinfl()</code>, <code>rstanarm::stan_glm()</code>, <code>stats::aov()</code>, <code>stats::glm()</code>, <code>stats::lm()</code>, <code>stats::nls()</code>, <code>survey::svycoxph()</code>, <code>survey::svyglm()</code>, <code>survey::svyolr()</code>, <code>survival::cch()</code>, <code>survival::clogit()</code>, <code>survival::coxph()</code>, <code>survival::survreg()</code>, <code>tidycmprsk::crr()</code>, <code>VGAM::vglm()</code>.</p>
+</div>
+</section>
+<section id="cardx-in-practice" class="slide level2">
+<h2>{cardx} in Practice</h2>
+<p>In the example below, we’re adding a confidence interval around the rate of subjects who completed the study.</p>
+<p>We’re using the default computation method (Wald) and confidence level (95%).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>cards<span class="sc">::</span>ADSL <span class="sc">|&gt;</span> </span>
+<span id="cb15-2"><a></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">COMPLETED =</span> DCDECOD <span class="sc">==</span> <span class="st">"COMPLETED"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb15-3"><a></a>  cardx<span class="sc">::</span><span class="fu">ard_proportion_ci</span>(<span class="at">variables =</span> COMPLETED) <span class="co"># using default CI method 'Wald'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>{cards} data frame: 6 x 8</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   variable   context  stat_name stat_label      stat fmt_fn
+1 COMPLETED proporti…          N          N       254      0
+2 COMPLETED proporti…   estimate   estimate     0.433      1
+3 COMPLETED proporti…   conf.low   conf.low      0.37      1
+4 COMPLETED proporti…  conf.high  conf.high     0.496      1
+5 COMPLETED proporti… conf.level  conf.lev…      0.95      1
+6 COMPLETED proporti…     method     method Wald Con…   &lt;fn&gt;</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>ℹ 2 more variables: warning, error</code></pre>
+</div>
+</div>
+</section>
+<section id="cardx-in-practice-gone-wrong" class="slide level2">
+<h2>{cardx} in Practice: <em>Gone Wrong</em> 😱</h2>
+<p>What happens when statistics are un-calculable?</p>
+<p>(It’s one of my favorite features of {cards} and {cardx})</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>ard_gone_wrong <span class="ot">&lt;-</span> cards<span class="sc">::</span>ADSL <span class="sc">|&gt;</span> </span>
+<span id="cb19-2"><a></a>  cards<span class="sc">::</span><span class="fu">ard_continuous</span>(</span>
+<span id="cb19-3"><a></a>    <span class="at">variable =</span> AGEGR1,</span>
+<span id="cb19-4"><a></a>    <span class="at">statistic =</span> <span class="sc">~</span><span class="fu">list</span>(<span class="at">kurtosis =</span> \(x) e1071<span class="sc">::</span><span class="fu">kurtosis</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb19-5"><a></a>  )</span>
+<span id="cb19-6"><a></a>ard_gone_wrong</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>{cards} data frame: 1 x 8</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  variable stat_name stat_label stat   warning     error
+1   AGEGR1  kurtosis   kurtosis      argument… non-nume…</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>ℹ 2 more variables: context, fmt_fn</code></pre>
+</div>
+</div>
+<div class="fragment">
+<div class="sourceCode" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="fu">print_ard_conditions</span>(ard_gone_wrong)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><img data-src="images/ard-error-msg.png"></p>
+</div>
+<aside class="notes">
+<ul>
+<li><p>Even when there are errors or warnings, we still get the ARD with the expected structure returned.</p>
+<ul>
+<li><p>THIS IS BIG! There are MANY circumstances, when you are designing TLGs early in a study when you do not have all the data required to calculate every statistic.</p></li>
+<li><p>This allows you to design everything up-front.</p></li>
+</ul></li>
+<li><p>We can also report these warnings and errors back to users. &lt;!CLICK!&gt;</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section></section>
+<section>
+<section id="gtsummary" class="title-slide slide level1 center">
+<h1>{gtsummary}</h1>
+
+</section>
+<section id="gtsummary-r-package" class="slide level2">
+<h2>{gtsummary} R Package <a href="https://ddsjoberg.github.io/gtsummary/"><img src="https://ddsjoberg.github.io/gtsummary/logo.png" align="right" height="138" alt="gtsummary website"></a></h2>
+<ul>
+<li><p>Talk about the success of gtsummary</p>
+<ul>
+<li><p>most downloaded summary table package on CRAN</p></li>
+<li><p>composable tables make it very popular. it makes it easy create bespoke tables</p></li>
+<li><p>tables output to gt, flextable, huxtable, kableExtra, kable, and even tibbles/data frames. meaning that you can utilize any printing engine for your needed output type (each of them have their strengths)</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="gtsummarycards" class="slide level2">
+<h2>gtsummary+cards</h2>
+<p>then move on to how {cards} and {gtsummary} can work together.</p>
+<ul>
+<li><p>The {cards} package does not present results and this is where the {gtsummary} package shines.</p></li>
+<li><p>The {gtsummary} package offers a modular framework to construct summary tables.</p></li>
+<li><p>The {gtsummary} package is the most widely used package for summary tables in the R ecosystem, and won the American Statistical Association’s 2021 award for Innovation in Statistical Programming and Analytics and it’s currently being refactored with a {cards} backend.</p></li>
+</ul>
+</section>
+<section id="gtsummarycards-1" class="slide level2">
+<h2>gtsummary+cards</h2>
+
+<img data-src="images/ard-gtsummary-workflow.png" class="r-stretch"></section>
+<section id="final-slides" class="slide level2">
+<h2>final slides</h2>
+<p>How best to end this presentation?</p>
 
 <div class="quarto-auto-generated-content">
 <p><img src="images/v2-gtsummary-cards-cardx-HexSticker.png" class="slide-logo"></p>
