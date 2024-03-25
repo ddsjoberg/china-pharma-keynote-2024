@@ -48,7 +48,7 @@ How is this related to ARD and the {cards} package? 🤔🤔
 
 - The {gtsummary} package is currently being refactored with a {cards} backend.
 
-- In addition to a refactor, adding new features to make creating common pharma tables easier to create.
+- In addition to a refactor, adding new features making it easier to create common pharma tables.
 
 ## {cards} + {gtsummary}
 
