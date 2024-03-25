@@ -45,7 +45,8 @@ What happens when statistics are un-calculable?
 
 ```{r}
 #| message: true
-ard_gone_wrong <- cards::ADSL |> 
+ard_gone_wrong <- 
+  cards::ADSL |> 
   cards::ard_continuous(
     variable = AGEGR1,
     statistic = ~list(kurtosis = \(x) e1071::kurtosis(x, na.rm = TRUE))

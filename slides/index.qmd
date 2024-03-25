@@ -1,6 +1,6 @@
 ---
 title: "CDISC Analysis Results Data with {cards} + {gtsummary}"
-author: "Daniel D. Sjoberg"
+author: "蘇丹杰 (Daniel D. Sjoberg)"
 footer:  "[CDISC Analysis Results Data with {cards}+{gtsummary}](https://www.danieldsjoberg.com/china-pharma-keynote-2024/)"
 logo: "images/v2-gtsummary-cards-cardx-HexSticker.png"
 editor: source
@@ -27,16 +27,16 @@ library(cardx)
 library(gtsummary)
 library(tidyverse)
 
-knit_print.gtsummary <- function(x, ...) {
-  gtsummary::as_gt(x) |> gt::as_raw_html()
-}
-
-knit_print.gt_tbl <- function(x, ...) {
-  gt::as_raw_html(x)
-}
-
-registerS3method("knit_print", "gtsummary", knit_print.gtsummary)
-registerS3method("knit_print", "gt_tbl", knit_print.gt_tbl)
+# knit_print.gtsummary <- function(x, ...) {
+#   gtsummary::as_gt(x) |> gt::as_raw_html()
+# }
+# 
+# knit_print.gt_tbl <- function(x, ...) {
+#   gt::as_raw_html(x)
+# }
+# 
+# registerS3method("knit_print", "gtsummary", knit_print.gtsummary)
+# registerS3method("knit_print", "gt_tbl", knit_print.gt_tbl)
 
 # fill for font awesome icons
 fa_fill <- "#606060"

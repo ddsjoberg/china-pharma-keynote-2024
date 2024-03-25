@@ -81,7 +81,7 @@ The results from all these functions are entirely compatible with one another, a
 
 In addition to exporting functions to prepare summaries, {cards} exports many utilities for wrangling ARDs and creating new ARDs.
 
-Construct: `bind_ard()`, `tidy_as_ard()`, `nest_for_ard()`, `check_ard_structure()`, and many more
+Constructing: `bind_ard()`, `tidy_as_ard()`, `nest_for_ard()`, `check_ard_structure()`, and many more
 
 Wrangling: `shuffle_ard()`, `get_ard_statistics()`, `replace_null_statistic()`, etc.
 

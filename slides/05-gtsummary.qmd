@@ -1,30 +1,147 @@
 # {gtsummary} 
 
-## {gtsummary} R Package <a href="https://ddsjoberg.github.io/gtsummary/"><img src="https://ddsjoberg.github.io/gtsummary/logo.png" align="right" height="138" alt="gtsummary website" /></a>
+## {gtsummary} Background <a href="https://ddsjoberg.github.io/gtsummary/"><img src="https://ddsjoberg.github.io/gtsummary/logo.png" align="right" height="138" alt="gtsummary website" /></a>
 
-- Talk about the success of gtsummary
+- Born from my time as a biostatistician at Memorial Sloan Kettering Cancer Center.
 
-  - most downloaded summary table package on CRAN
-  
-  - composable tables make it very popular. it makes it easy create bespoke tables
-  
-  - tables output to gt, flextable, huxtable, kableExtra, kable, and even tibbles/data frames. meaning that you can utilize any printing engine for your needed output type (each of them have their strengths)
-  
-## gtsummary+cards
+- I led a team of other statisticians and I wanted us to transition to R.
 
-then move on to how {cards} and {gtsummary} can work together.
+- Began writing a package that eventually became {gtsummary} to help make this transition smooth.
+
+- Since then the package grew and grew, and is now the **most downloaded** summary table package on CRAN.
+
+- Package the American Statistical Association’s (ASA) 2021 award for Innovation in Statistical Programming and Analytics
+
+## {gtsummary} R Package
+
+![](https://raw.githubusercontent.com/ddsjoberg/gtsummary/main/data-raw/misc_files/tbl_summary_demo_fast.gif){fig-align="center"}
+
+::: {.notes}
+
+- gtsummary tables are composable, that leads to a wonderful user experience
+
+- no more needing to memorize an enormous function with too many arguments
+
+:::
+
+## {gtsummary} R Package
+
+
+![](images/gtsummary-print-engines.png){fig-align="center"}
+
+::: {.notes}
+
+- a gtsummary table can be converted into any of these types, and styling and formatting functions from those packages can be used to continue to make the table _exactly_ as you'd like.
+
+- each of these engines have their own strengths
+
+- there is a lot more i could share about the package: I've never given a three-slide summary of its features before!
+
+:::
+
+
+## {cards} + {gtsummary}
+
+How is this related to ARD and the {cards} package? 🤔🤔
 
 - The {cards} package does not present results and this is where the {gtsummary} package shines.
 
-- The {gtsummary} package offers a modular framework to construct summary tables. 
+- The {gtsummary} package is currently being refactored with a {cards} backend.
 
-- The {gtsummary} package is the most widely used package for summary tables in the R ecosystem, and won the American Statistical Association’s 2021 award for Innovation in Statistical Programming and Analytics and it’s currently being refactored with a {cards} backend.
+- In addition to a refactor, adding new features to make creating common pharma tables easier to create.
 
-## gtsummary+cards
+## {cards} + {gtsummary}
 
 ![](images/ard-gtsummary-workflow.png)
 
-## final slides
+## Stay Tuned!
 
-How best to end this presentation?
-  
+:::: {.columns}
+
+::: {.column width="70%"}
+* Expect new releases of {cards}, {cardx}, and {gtsummary} soon!
+
+* These packages working together will serve as a strong combination for ARD-first TLG creation in the pharmaceutical space.
+:::
+
+::: {.column width="30%"}
+<img src="images/v1-gtsummary-cards-cardx-HexSticker.png" alt="drawing" width="80%"/>
+:::
+
+::::
+
+
+
+![](https://www.secondnature.com.au/wp-content/uploads/2015/10/shutterstock_1916496068-2048x768.jpg){.fragment width=800 fig-align="center"}
+
+
+::: {.notes}
+
+- And I will get to these hux logos too!
+
+- If you have suggestions, please join the conversation.
+
+- <CLICK>
+
+- Any questions??
+
+:::
+
+## Mock Tables
+
+- With {cards}+{gtsummary} it's easy to create bespoke table shells.
+
+```{r}
+cards::ADSL |> 
+  cards::ard_continuous(
+    variables = AGE, 
+    fmt_fn = ~list(everything() ~ \(x) "xx")
+  ) |> 
+  cards::apply_fmt_fn() |> 
+  print(n = 3)
+```
+
+- Pass this ARD to `card_summary()` and the table will be populated with `"xx"` placeholders.
+
+## Mock Tables
+
+```{r}
+#| echo: false
+# library(knitr)
+# 
+# knit_print.gtsummary <- function(x, ...) {
+#   gtsummary::as_gt(x) |> gt::as_raw_html()
+# }
+# 
+# knit_print.gt_tbl <- function(x, ...) {
+#   gt::as_raw_html(x)
+# }
+
+# registerS3method("knit_print", "gtsummary", knit_print.gtsummary)
+# registerS3method("knit_print", "gt_tbl", knit_print.gt_tbl)
+
+# gtsummary::theme_gtsummary_compact()
+cards::ADSL |>
+  dplyr::select(ARM, AGE, AGEGR1) |>
+  dplyr::mutate(
+    ARM = factor(ARM, levels = c("Placebo", "Xanomeline Low Dose", "Xanomeline High Dose")),
+    AGEGR1 = factor(AGEGR1, levels = c("<65", "65-80", ">80"), labels = c("&lt;65", "65-80", ">80"))
+  ) |>
+  gtsummary::tbl_summary(
+    by = ARM,
+    type = AGE ~ "continuous2",
+    statistic = AGE ~ c("{median} ({p25}, {p75})", "{mean} ({sd})", "{min} - {max}"),
+    label = list(AGEGR1 = "Age Group"),
+    digits = list(
+      gtsummary::all_categorical() ~ list(\(x) "xx", \(x) "xx.x"), 
+      gtsummary::all_continuous() ~ \(x) "xx"
+    )
+  ) |>
+  gtsummary::add_stat_label() |>
+  gtsummary::bold_labels() |>
+  gtsummary::modify_header(gtsummary::all_stat_cols() ~ "**{level}**  \nN = xx") |>
+  gtsummary::modify_column_alignment(columns = -label, "right") |>
+  gtsummary::as_gt() |>
+  gt::cols_width(gtsummary::all_stat_cols() ~ gt::pct(23)) |>
+  gt::opt_table_font(stack = "monospace-code")
+```
