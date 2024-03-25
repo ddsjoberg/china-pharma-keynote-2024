@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -137,10 +171,14 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#gtsummary" id="toc-gtsummary" class="nav-link active" data-scroll-target="#gtsummary">{gtsummary}</a>
   <ul class="collapse">
-  <li><a href="#gtsummary-r-package" id="toc-gtsummary-r-package" class="nav-link" data-scroll-target="#gtsummary-r-package">{gtsummary} R Package </a><a href="https://ddsjoberg.github.io/gtsummary/" class="nav-link" data-scroll-target="https\://ddsjoberg.github.io/gtsummary/"><img src="https://ddsjoberg.github.io/gtsummary/logo.png" align="right" height="138" alt="gtsummary website"></a></li>
-  <li><a href="#gtsummarycards" id="toc-gtsummarycards" class="nav-link" data-scroll-target="#gtsummarycards">gtsummary+cards</a></li>
-  <li><a href="#gtsummarycards-1" id="toc-gtsummarycards-1" class="nav-link" data-scroll-target="#gtsummarycards-1">gtsummary+cards</a></li>
-  <li><a href="#final-slides" id="toc-final-slides" class="nav-link" data-scroll-target="#final-slides">final slides</a></li>
+  <li><a href="#gtsummary-background" id="toc-gtsummary-background" class="nav-link" data-scroll-target="#gtsummary-background">{gtsummary} Background </a><a href="https://ddsjoberg.github.io/gtsummary/" class="nav-link" data-scroll-target="https\://ddsjoberg.github.io/gtsummary/"><img src="https://ddsjoberg.github.io/gtsummary/logo.png" align="right" height="138" alt="gtsummary website"></a></li>
+  <li><a href="#gtsummary-r-package" id="toc-gtsummary-r-package" class="nav-link" data-scroll-target="#gtsummary-r-package">{gtsummary} R Package</a></li>
+  <li><a href="#gtsummary-r-package-1" id="toc-gtsummary-r-package-1" class="nav-link" data-scroll-target="#gtsummary-r-package-1">{gtsummary} R Package</a></li>
+  <li><a href="#cards-gtsummary" id="toc-cards-gtsummary" class="nav-link" data-scroll-target="#cards-gtsummary">{cards} + {gtsummary}</a></li>
+  <li><a href="#cards-gtsummary-1" id="toc-cards-gtsummary-1" class="nav-link" data-scroll-target="#cards-gtsummary-1">{cards} + {gtsummary}</a></li>
+  <li><a href="#stay-tuned" id="toc-stay-tuned" class="nav-link" data-scroll-target="#stay-tuned">Stay Tuned!</a></li>
+  <li><a href="#mock-tables" id="toc-mock-tables" class="nav-link" data-scroll-target="#mock-tables">Mock Tables</a></li>
+  <li><a href="#mock-tables-1" id="toc-mock-tables-1" class="nav-link" data-scroll-target="#mock-tables-1">Mock Tables</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/ddsjoberg/china-pharma-keynote-2024/edit/main/slides/05-gtsummary.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ddsjoberg/china-pharma-keynote-2024/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -153,33 +191,649 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="gtsummary" class="level1">
 <h1>{gtsummary}</h1>
-<section id="gtsummary-r-package" class="level2">
-<h2 class="anchored" data-anchor-id="gtsummary-r-package">{gtsummary} R Package <a href="https://ddsjoberg.github.io/gtsummary/"><img src="https://ddsjoberg.github.io/gtsummary/logo.png" align="right" height="138" alt="gtsummary website"></a></h2>
+<section id="gtsummary-background" class="level2">
+<h2 class="anchored" data-anchor-id="gtsummary-background">{gtsummary} Background <a href="https://ddsjoberg.github.io/gtsummary/"><img src="https://ddsjoberg.github.io/gtsummary/logo.png" align="right" height="138" alt="gtsummary website"></a></h2>
 <ul>
-<li><p>Talk about the success of gtsummary</p>
-<ul>
-<li><p>most downloaded summary table package on CRAN</p></li>
-<li><p>composable tables make it very popular. it makes it easy create bespoke tables</p></li>
-<li><p>tables output to gt, flextable, huxtable, kableExtra, kable, and even tibbles/data frames. meaning that you can utilize any printing engine for your needed output type (each of them have their strengths)</p></li>
-</ul></li>
+<li><p>Born from my time as a biostatistician at Memorial Sloan Kettering Cancer Center.</p></li>
+<li><p>I led a team of other statisticians and I wanted us to transition to R.</p></li>
+<li><p>Began writing a package that eventually became {gtsummary} to help make this transition smooth.</p></li>
+<li><p>Since then the package grew and grew, and is now the <strong>most downloaded</strong> summary table package on CRAN.</p></li>
+<li><p>Package the American Statistical Association’s (ASA) 2021 award for Innovation in Statistical Programming and Analytics</p></li>
 </ul>
 </section>
-<section id="gtsummarycards" class="level2">
-<h2 class="anchored" data-anchor-id="gtsummarycards">gtsummary+cards</h2>
-<p>then move on to how {cards} and {gtsummary} can work together.</p>
+<section id="gtsummary-r-package" class="level2">
+<h2 class="anchored" data-anchor-id="gtsummary-r-package">{gtsummary} R Package</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://raw.githubusercontent.com/ddsjoberg/gtsummary/main/data-raw/misc_files/tbl_summary_demo_fast.gif" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<div class="notes">
+<ul>
+<li><p>gtsummary tables are composable, that leads to a wonderful user experience</p></li>
+<li><p>no more needing to memorize an enormous function with too many arguments</p></li>
+</ul>
+</div>
+</section>
+<section id="gtsummary-r-package-1" class="level2">
+<h2 class="anchored" data-anchor-id="gtsummary-r-package-1">{gtsummary} R Package</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/gtsummary-print-engines.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></p>
+</figure>
+</div>
+<div class="notes">
+<ul>
+<li><p>a gtsummary table can be converted into any of these types, and styling and formatting functions from those packages can be used to continue to make the table <em>exactly</em> as you’d like.</p></li>
+<li><p>each of these engines have their own strengths</p></li>
+<li><p>there is a lot more i could share about the package: I’ve never given a three-slide summary of its features before!</p></li>
+</ul>
+</div>
+</section>
+<section id="cards-gtsummary" class="level2">
+<h2 class="anchored" data-anchor-id="cards-gtsummary">{cards} + {gtsummary}</h2>
+<p>How is this related to ARD and the {cards} package? 🤔🤔</p>
 <ul>
 <li><p>The {cards} package does not present results and this is where the {gtsummary} package shines.</p></li>
-<li><p>The {gtsummary} package offers a modular framework to construct summary tables.</p></li>
-<li><p>The {gtsummary} package is the most widely used package for summary tables in the R ecosystem, and won the American Statistical Association’s 2021 award for Innovation in Statistical Programming and Analytics and it’s currently being refactored with a {cards} backend.</p></li>
+<li><p>The {gtsummary} package is currently being refactored with a {cards} backend.</p></li>
+<li><p>In addition to a refactor, adding new features to make creating common pharma tables easier to create.</p></li>
 </ul>
 </section>
-<section id="gtsummarycards-1" class="level2">
-<h2 class="anchored" data-anchor-id="gtsummarycards-1">gtsummary+cards</h2>
+<section id="cards-gtsummary-1" class="level2">
+<h2 class="anchored" data-anchor-id="cards-gtsummary-1">{cards} + {gtsummary}</h2>
 <p><img src="images/ard-gtsummary-workflow.png" class="img-fluid"></p>
 </section>
-<section id="final-slides" class="level2">
-<h2 class="anchored" data-anchor-id="final-slides">final slides</h2>
-<p>How best to end this presentation?</p>
+<section id="stay-tuned" class="level2">
+<h2 class="anchored" data-anchor-id="stay-tuned">Stay Tuned!</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<ul>
+<li><p>Expect new releases of {cards}, {cardx}, and {gtsummary} soon!</p></li>
+<li><p>These packages working together will serve as a strong combination for ARD-first TLG creation in the pharmaceutical space.</p></li>
+</ul>
+</div><div class="column" style="width:30%;">
+<p><img src="images/v1-gtsummary-cards-cardx-HexSticker.png" alt="drawing" width="80%"></p>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://www.secondnature.com.au/wp-content/uploads/2015/10/shutterstock_1916496068-2048x768.jpg" class="fragment img-fluid quarto-figure quarto-figure-center figure-img" width="800"></p>
+</figure>
+</div>
+<div class="notes">
+<ul>
+<li><p>And I will get to these hux logos too!</p></li>
+<li><p>If you have suggestions, please join the conversation.</p></li>
+<li><p><click></click></p></li>
+<li><p>Any questions??</p></li>
+</ul>
+</div>
+</section>
+<section id="mock-tables" class="level2">
+<h2 class="anchored" data-anchor-id="mock-tables">Mock Tables</h2>
+<ul>
+<li>With {cards}+{gtsummary} it’s easy to create bespoke table shells.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>cards<span class="sc">::</span>ADSL <span class="sc">|&gt;</span> </span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  cards<span class="sc">::</span><span class="fu">ard_continuous</span>(</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">variables =</span> AGE, </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">fmt_fn =</span> <span class="sc">~</span><span class="fu">list</span>(<span class="fu">everything</span>() <span class="sc">~</span> \(x) <span class="st">"xx"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span> </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  cards<span class="sc">::</span><span class="fu">apply_fmt_fn</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="at">n =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>{cards} data frame: 8 x 9</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  variable   context stat_name stat_label   stat stat_fmt
+1      AGE continuo…         N          N    254       xx
+2      AGE continuo…      mean       Mean 75.087       xx
+3      AGE continuo…        sd         SD  8.246       xx</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>ℹ 5 more rows</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>ℹ Use `print(n = ...)` to see more rows</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>ℹ 3 more variables: fmt_fn, warning, error</code></pre>
+</div>
+</div>
+<ul>
+<li>Pass this ARD to <code>card_summary()</code> and the table will be populated with <code>"xx"</code> placeholders.</li>
+</ul>
+</section>
+<section id="mock-tables-1" class="level2">
+<h2 class="anchored" data-anchor-id="mock-tables-1">Mock Tables</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div id="czxpxmiukz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#czxpxmiukz table {
+  font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#czxpxmiukz thead, #czxpxmiukz tbody, #czxpxmiukz tfoot, #czxpxmiukz tr, #czxpxmiukz td, #czxpxmiukz th {
+  border-style: none;
+}
+
+#czxpxmiukz p {
+  margin: 0;
+  padding: 0;
+}
+
+#czxpxmiukz .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#czxpxmiukz .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#czxpxmiukz .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#czxpxmiukz .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#czxpxmiukz .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#czxpxmiukz .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#czxpxmiukz .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#czxpxmiukz .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#czxpxmiukz .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#czxpxmiukz .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#czxpxmiukz .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#czxpxmiukz .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#czxpxmiukz .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#czxpxmiukz .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#czxpxmiukz .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#czxpxmiukz .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#czxpxmiukz .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#czxpxmiukz .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#czxpxmiukz .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#czxpxmiukz .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#czxpxmiukz .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#czxpxmiukz .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#czxpxmiukz .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#czxpxmiukz .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#czxpxmiukz .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#czxpxmiukz .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#czxpxmiukz .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#czxpxmiukz .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#czxpxmiukz .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#czxpxmiukz .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#czxpxmiukz .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#czxpxmiukz .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#czxpxmiukz .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#czxpxmiukz .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#czxpxmiukz .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#czxpxmiukz .gt_left {
+  text-align: left;
+}
+
+#czxpxmiukz .gt_center {
+  text-align: center;
+}
+
+#czxpxmiukz .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#czxpxmiukz .gt_font_normal {
+  font-weight: normal;
+}
+
+#czxpxmiukz .gt_font_bold {
+  font-weight: bold;
+}
+
+#czxpxmiukz .gt_font_italic {
+  font-style: italic;
+}
+
+#czxpxmiukz .gt_super {
+  font-size: 65%;
+}
+
+#czxpxmiukz .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#czxpxmiukz .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#czxpxmiukz .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#czxpxmiukz .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#czxpxmiukz .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#czxpxmiukz .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#czxpxmiukz .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<colgroup>
+<col>
+<col style="width: 23%">
+<col style="width: 23%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr class="header gt_col_headings">
+<th id="<strong>Characteristic</strong>" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"><strong>Characteristic</strong></th>
+<th id="<strong>Placebo</strong><br />
+N = xx" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col"><strong>Placebo</strong><br>
+N = xx</th>
+<th id="<strong>Xanomeline Low Dose</strong><br />
+N = xx" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col"><strong>Xanomeline Low Dose</strong><br>
+N = xx</th>
+<th id="<strong>Xanomeline High Dose</strong><br />
+N = xx" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col"><strong>Xanomeline High Dose</strong><br>
+N = xx</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Age</td>
+<td class="gt_row gt_right" headers="stat_1"><br>
+</td>
+<td class="gt_row gt_right" headers="stat_2"><br>
+</td>
+<td class="gt_row gt_right" headers="stat_3"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Median (IQR)</td>
+<td class="gt_row gt_right" headers="stat_1">xx (xx, xx)</td>
+<td class="gt_row gt_right" headers="stat_2">xx (xx, xx)</td>
+<td class="gt_row gt_right" headers="stat_3">xx (xx, xx)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Mean (SD)</td>
+<td class="gt_row gt_right" headers="stat_1">xx (xx)</td>
+<td class="gt_row gt_right" headers="stat_2">xx (xx)</td>
+<td class="gt_row gt_right" headers="stat_3">xx (xx)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Range</td>
+<td class="gt_row gt_right" headers="stat_1">xx - xx</td>
+<td class="gt_row gt_right" headers="stat_2">xx - xx</td>
+<td class="gt_row gt_right" headers="stat_3">xx - xx</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Age Group, n (%)</td>
+<td class="gt_row gt_right" headers="stat_1"><br>
+</td>
+<td class="gt_row gt_right" headers="stat_2"><br>
+</td>
+<td class="gt_row gt_right" headers="stat_3"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;&lt;65</td>
+<td class="gt_row gt_right" headers="stat_1">xx (xx.x%)</td>
+<td class="gt_row gt_right" headers="stat_2">xx (xx.x%)</td>
+<td class="gt_row gt_right" headers="stat_3">xx (xx.x%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;65-80</td>
+<td class="gt_row gt_right" headers="stat_1">xx (xx.x%)</td>
+<td class="gt_row gt_right" headers="stat_2">xx (xx.x%)</td>
+<td class="gt_row gt_right" headers="stat_3">xx (xx.x%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;&gt;80</td>
+<td class="gt_row gt_right" headers="stat_1">xx (xx.x%)</td>
+<td class="gt_row gt_right" headers="stat_2">xx (xx.x%)</td>
+<td class="gt_row gt_right" headers="stat_3">xx (xx.x%)</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</div>
 
 
 </section>
