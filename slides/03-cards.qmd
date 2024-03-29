@@ -14,11 +14,13 @@ ard_continuous(ADSL, variables = AGE)
 
 ::: {.notes}
 
+- Best way to introduce is with a simple example
+
 - one line per statistic
 
 - includes default set of summary statistics
 
-- default formatting function (in this case, the integer is shortcut to format/round to 1 decimal place)
+- Briefly review each column: stat names, stat labels, numeric results, fmt_fn 
 
 - a simple data frame result, which means it is easy to work with a modify
 
@@ -40,12 +42,25 @@ ard_continuous(ADSL, variables = AGE)
 ADSL |> 
   ard_continuous(
     variables = AGE,
-    by = ARM, # calculate summary stats by treatment arm
-    statistic = ~list(mean = \(x) mean(x, na.rm = TRUE)), # return the mean
-    fmt_fn = ~list(mean = 0) # format the result
+    by = ARM,                               # stats by treatment arm
+    statistic = ~list(mean = \(x) mean(x)), # return the mean
+    fmt_fn = ~list(mean = 0)                # format the result
   ) |> 
   apply_fmt_fn() # add a character column of rounded results
 ```
+
+::: {.notes}
+
+Using the `by`, `statastic`, and `fmt_fn` arguments
+
+  - `fmt_fn` uses integers as aliases, but can of course use a proper function
+  
+  - note the new `group1` and `group1_level` columns. NO PROTECTED NAMES 
+
+Also calling `apply_fmt_fn()` adds a column of formatted results
+
+:::
+
 
 ## {cards}: `ard_categorical()`
 
@@ -63,6 +78,14 @@ ADSL |>
 ::: {.small}
 
 _Any unobserved levels of the variables will be present in the resulting ARD._
+:::
+
+::: {.notes}
+
+Categorical summaries have a similar structure to the continuous
+
+This time we have a new column `variable_level`
+
 :::
 
 ## {cards}: Other Summary Functions

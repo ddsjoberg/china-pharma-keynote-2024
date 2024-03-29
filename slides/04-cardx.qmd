@@ -12,6 +12,8 @@
 
 Yes, this is also a draft hex sticker!
 
+I could do an entire talk on the regression model solution. It's amazing work with Joseph Larmarange.
+
 :::
 
 ## {cardx}
@@ -37,11 +39,21 @@ cards::ADSL |>
   cardx::ard_proportion_ci(variables = COMPLETED) # using default CI method 'Wald'
 ```
 
+::: {.notes}
+
+Notice anything strange about the `stat` column?
+
+How do we have a character result mixed with numeric?
+
+LIST COLUMNS! You could include a matrix result, an entire modeling object, anything.
+
+:::
+
 ## {cardx} in Practice: _Gone Wrong_ 😱
 
 What happens when statistics are un-calculable? 
 
-(It's one of my favorite features of {cards} and {cardx})
+_It's one of my favorite features of {cards} and {cardx}_
 
 ```{r}
 #| message: true
@@ -49,7 +61,7 @@ ard_gone_wrong <-
   cards::ADSL |> 
   cards::ard_continuous(
     variable = AGEGR1,
-    statistic = ~list(kurtosis = \(x) e1071::kurtosis(x, na.rm = TRUE))
+    statistic = ~list(kurtosis = \(x) e1071::kurtosis(x))
   )
 ard_gone_wrong
 ```
@@ -66,6 +78,8 @@ print_ard_conditions(ard_gone_wrong)
 
 ::: {.notes}
 
+- Where is the statistic? `AGEGR1` is _character_
+
 - Even when there are errors or warnings, we still get the ARD with the expected structure returned.
 
   - THIS IS BIG! There are MANY circumstances, when you are designing TLGs early in a study when you do not have all the data required to calculate every statistic.
@@ -75,3 +89,13 @@ print_ard_conditions(ard_gone_wrong)
 - We can also report these warnings and errors back to users. <!CLICK!>
 
 :::
+
+## {cards} + {cardx}
+
+- These packages together provide robust set of tools for preparing ARDs.
+
+- Incredibly easy to extend them for your own specific cases.
+
+- But what's next? I want a pretty table!
+
+

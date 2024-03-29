@@ -8,7 +8,7 @@
 
 - Began writing a package that eventually became {gtsummary} to help make this transition smooth.
 
-- Since then the package grew and grew, and is now the **most downloaded** summary table package on CRAN.
+- Since then the package has grown and grown, and is now the **most downloaded** summary table package on CRAN.
 
 - Package the American Statistical Association’s (ASA) 2021 award for Innovation in Statistical Programming and Analytics
 
@@ -22,6 +22,8 @@
 
 - no more needing to memorize an enormous function with too many arguments
 
+- Importantly, INCLUDES A GRAMMER FOR merging AND stacking. This is huge for creating bespoke tables.
+
 :::
 
 ## {gtsummary} R Package
@@ -29,13 +31,14 @@
 
 ![](images/gtsummary-print-engines.png){fig-align="center"}
 
+
 ::: {.notes}
 
 - a gtsummary table can be converted into any of these types, and styling and formatting functions from those packages can be used to continue to make the table _exactly_ as you'd like.
 
 - each of these engines have their own strengths
 
-- there is a lot more i could share about the package: I've never given a three-slide summary of its features before!
+- there is a lot more I could share about the package: I've never given a three-slide summary of its features before!
 
 :::
 
@@ -53,6 +56,16 @@ How is this related to ARD and the {cards} package? 🤔🤔
 ## {cards} + {gtsummary}
 
 ![](images/ard-gtsummary-workflow.png)
+
+::: {.notes}
+
+- Integrating with the most popular summary tabling package in the R ecosystem is BIG!
+
+- With a huge user base, you can easily find solutions for your esoteric questions
+
+  - Questions that have likely alreday been answered on stackoverflow.
+
+:::
 
 ## Stay Tuned!
 
@@ -77,11 +90,11 @@ How is this related to ARD and the {cards} package? 🤔🤔
 
 ::: {.notes}
 
-- And I will get to these hux logos too!
+- And I will get to these hex logos too!
 
-- If you have suggestions, please join the conversation.
+- If you have suggestions, please join the conversation on GitHub
 
-- <CLICK>
+- CLICK
 
 - Any questions??
 

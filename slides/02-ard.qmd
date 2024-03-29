@@ -10,6 +10,16 @@
 
 * The ARD can be used to to subsequently create tables and figures.
 
+::: {.notes}
+
+This is where I start getting interested!
+
+The CDISC model is not over prescriptive how these results need to look.
+
+We'll review our general approach, which lends itself to the R language 
+
+:::
+
 ## Analysis Results Data (ARD)
 
 * After the initial creation of an ARD, the results can later be re-used again and again for subsequent reporting needs.
@@ -18,6 +28,14 @@
 
 ::: {.notes}
 
-- Re-creating a figure with only two of the three treatment arms shown, or pruning a large complex table to show only the most interesting results for a presentation (when the initial results may been prepared for regulatory purposes).
+- The same results can be used again and again. 
+
+  - Great for when we are switching context (eg CSR to a slideshow): you don't need to re-calculate and re-check those calculations
+
+- Re-creating a figure with only 2 of the 3 treatment arms, 
+
+- Pruning a large complex table to show only the most interesting results for a presentation (when the initial results may been prepared for regulatory purposes).
+
+- 
 
 :::
