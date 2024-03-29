@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.551">
+<meta name="generator" content="quarto-1.4.552">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -175,6 +175,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#cardx-1" id="toc-cardx-1" class="nav-link" data-scroll-target="#cardx-1">{cardx}</a></li>
   <li><a href="#cardx-in-practice" id="toc-cardx-in-practice" class="nav-link" data-scroll-target="#cardx-in-practice">{cardx} in Practice</a></li>
   <li><a href="#cardx-in-practice-gone-wrong" id="toc-cardx-in-practice-gone-wrong" class="nav-link" data-scroll-target="#cardx-in-practice-gone-wrong">{cardx} in Practice: <em>Gone Wrong</em> 😱</a></li>
+  <li><a href="#cards-cardx" id="toc-cards-cardx" class="nav-link" data-scroll-target="#cards-cardx">{cards} + {cardx}</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/ddsjoberg/china-pharma-keynote-2024/edit/main/slides/04-cardx.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ddsjoberg/china-pharma-keynote-2024/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -196,6 +197,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <div class="notes">
 <p>Yes, this is also a draft hex sticker!</p>
+<p>I could do an entire talk on the regression model solution. It’s amazing work with Joseph Larmarange.</p>
 </div>
 </section>
 <section id="cardx-1" class="level2">
@@ -229,17 +231,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>ℹ 2 more variables: warning, error</code></pre>
 </div>
 </div>
+<div class="notes">
+<p>Notice anything strange about the <code>stat</code> column?</p>
+<p>How do we have a character result mixed with numeric?</p>
+<p>LIST COLUMNS! You could include a matrix result, an entire modeling object, anything.</p>
+</div>
 </section>
 <section id="cardx-in-practice-gone-wrong" class="level2">
 <h2 class="anchored" data-anchor-id="cardx-in-practice-gone-wrong">{cardx} in Practice: <em>Gone Wrong</em> 😱</h2>
 <p>What happens when statistics are un-calculable?</p>
-<p>(It’s one of my favorite features of {cards} and {cardx})</p>
+<p><em>It’s one of my favorite features of {cards} and {cardx}</em></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>ard_gone_wrong <span class="ot">&lt;-</span> </span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  cards<span class="sc">::</span>ADSL <span class="sc">|&gt;</span> </span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  cards<span class="sc">::</span><span class="fu">ard_continuous</span>(</span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">variable =</span> AGEGR1,</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">statistic =</span> <span class="sc">~</span><span class="fu">list</span>(<span class="at">kurtosis =</span> \(x) e1071<span class="sc">::</span><span class="fu">kurtosis</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">statistic =</span> <span class="sc">~</span><span class="fu">list</span>(<span class="at">kurtosis =</span> \(x) e1071<span class="sc">::</span><span class="fu">kurtosis</span>(x))</span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  )</span>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>ard_gone_wrong</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
@@ -259,6 +266,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="notes">
 <ul>
+<li><p>Where is the statistic? <code>AGEGR1</code> is <em>character</em></p></li>
 <li><p>Even when there are errors or warnings, we still get the ARD with the expected structure returned.</p>
 <ul>
 <li><p>THIS IS BIG! There are MANY circumstances, when you are designing TLGs early in a study when you do not have all the data required to calculate every statistic.</p></li>
@@ -267,6 +275,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>We can also report these warnings and errors back to users. &lt;!CLICK!&gt;</p></li>
 </ul>
 </div>
+</section>
+<section id="cards-cardx" class="level2">
+<h2 class="anchored" data-anchor-id="cards-cardx">{cards} + {cardx}</h2>
+<ul>
+<li><p>These packages together provide robust set of tools for preparing ARDs.</p></li>
+<li><p>Incredibly easy to extend them for your own specific cases.</p></li>
+<li><p>But what’s next? I want a pretty table!</p></li>
+</ul>
 
 
 </section>

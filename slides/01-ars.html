@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.551">
+<meta name="generator" content="quarto-1.4.552">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -141,7 +141,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#analysis-results-standard-ars-1" id="toc-analysis-results-standard-ars-1" class="nav-link" data-scroll-target="#analysis-results-standard-ars-1">Analysis Results Standard (ARS)</a></li>
   <li><a href="#analysis-results-standard-ars-2" id="toc-analysis-results-standard-ars-2" class="nav-link" data-scroll-target="#analysis-results-standard-ars-2">Analysis Results Standard (ARS)</a></li>
   <li><a href="#analysis-results-standard-ars-3" id="toc-analysis-results-standard-ars-3" class="nav-link" data-scroll-target="#analysis-results-standard-ars-3">Analysis Results Standard (ARS)</a></li>
-  <li><a href="#analysis-results-data-ard" id="toc-analysis-results-data-ard" class="nav-link" data-scroll-target="#analysis-results-data-ard">Analysis Results Data (ARD)</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/ddsjoberg/china-pharma-keynote-2024/edit/main/slides/01-ars.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/ddsjoberg/china-pharma-keynote-2024/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -166,6 +165,12 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="images/ars-objectives.png" class="fragment img-fluid quarto-figure quarto-figure-center figure-img"></p>
 </figure>
 </div>
+<div class="notes">
+<p>CDISC has clear guidelines on how to collect, clean, and prepare data for analysis.</p>
+<p>But nothing about results!</p>
+<p><click></click></p>
+<p>The ARS is meant to fill that gap.</p>
+</div>
 </section>
 <section id="analysis-results-standard-ars-1" class="level2">
 <h2 class="anchored" data-anchor-id="analysis-results-standard-ars-1">Analysis Results Standard (ARS)</h2>
@@ -176,6 +181,13 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Focus on concepts, <em>not layout</em>, e.g.&nbsp;the summary statistics, not how the results are shown in a table.</p></li>
 <li><p>Learn more at <a href="https://www.cdisc.org/events/webinar/analysis-results-standard-public-review">https://www.cdisc.org/events/webinar/analysis-results-standard-public-review</a></p></li>
 </ul>
+<div class="notes">
+<p>Emphasis on the PROSPECTIVE!</p>
+<ul>
+<li><p>Automation</p></li>
+<li><p>Concepts, not layout</p></li>
+</ul>
+</div>
 </section>
 <section id="analysis-results-standard-ars-2" class="level2">
 <h2 class="anchored" data-anchor-id="analysis-results-standard-ars-2">Analysis Results Standard (ARS)</h2>
@@ -189,8 +201,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><p>Overview of the meta data</p>
 <ul>
-<li><p>the data sets</p></li>
-<li><p>the exclusions (e.g.&nbsp;ITT population)</p></li>
+<li><p>the data sets, the exclusions (e.g.&nbsp;ITT population)</p></li>
 <li><p>I know the details here are sparse, but we need to get the meat of this presentation!</p></li>
 </ul></li>
 <li><p>Overview of ARD</p>
@@ -224,16 +235,12 @@ ul.task-list li input[type="checkbox"] {
 <li><p>after the re-factor is complete, gtsummary will help us build tables from ARDs</p></li>
 </ul>
 </div>
-</section>
-<section id="analysis-results-data-ard" class="level2">
-<h2 class="anchored" data-anchor-id="analysis-results-data-ard">Analysis Results Data (ARD)</h2>
-<ul>
-<li><p>Encodes statistical analysis outcomes in a machine-readable format.</p></li>
-<li><p>Primary objective is to streamline the processes of automation, ensuring reproducibility, promoting reusability, and enhancing traceability.</p></li>
-<li><p>The ARD model specified how statistical results are saved into a structured format.</p></li>
-<li><p>The ARD can be used to to subsequently create tables and figures.</p></li>
-<li><p>After the initial creation of an ARD, the results can later be re-used again and again for subsequent reporting needs; for example, re-creating a figure with only two of the three treatment arms shown, or pruning a large complex table to show only the most interesting results for a presentation (when the initial results may been prepared for regulatory purposes).</p></li>
-</ul>
+<!-- ## Analysis Results Data (ARD) -->
+<!-- * Encodes statistical analysis outcomes in a machine-readable format. -->
+<!-- * Primary objective is to streamline the processes of automation, ensuring reproducibility, promoting reusability, and enhancing traceability. -->
+<!-- * The ARD model specified how statistical results are saved into a structured format. -->
+<!-- * The ARD can be used to to subsequently create tables and figures. -->
+<!-- * After the initial creation of an ARD, the results can later be re-used again and again for subsequent reporting needs; for example, re-creating a figure with only two of the three treatment arms shown, or pruning a large complex table to show only the most interesting results for a presentation (when the initial results may been prepared for regulatory purposes). -->
 
 
 </section>

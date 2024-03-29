@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.551">
+<meta name="generator" content="quarto-1.4.552">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -216,9 +216,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="notes">
 <ul>
+<li><p>Best way to introduce is with a simple example</p></li>
 <li><p>one line per statistic</p></li>
 <li><p>includes default set of summary statistics</p></li>
-<li><p>default formatting function (in this case, the integer is shortcut to format/round to 1 decimal place)</p></li>
+<li><p>Briefly review each column: stat names, stat labels, numeric results, fmt_fn</p></li>
 <li><p>a simple data frame result, which means it is easy to work with a modify</p></li>
 </ul>
 </div>
@@ -236,9 +237,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>ADSL <span class="sc">|&gt;</span> </span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ard_continuous</span>(</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">variables =</span> AGE,</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">by =</span> ARM, <span class="co"># calculate summary stats by treatment arm</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">statistic =</span> <span class="sc">~</span><span class="fu">list</span>(<span class="at">mean =</span> \(x) <span class="fu">mean</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)), <span class="co"># return the mean</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">fmt_fn =</span> <span class="sc">~</span><span class="fu">list</span>(<span class="at">mean =</span> <span class="dv">0</span>) <span class="co"># format the result</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">by =</span> ARM,                               <span class="co"># stats by treatment arm</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">statistic =</span> <span class="sc">~</span><span class="fu">list</span>(<span class="at">mean =</span> \(x) <span class="fu">mean</span>(x)), <span class="co"># return the mean</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">fmt_fn =</span> <span class="sc">~</span><span class="fu">list</span>(<span class="at">mean =</span> <span class="dv">0</span>)                <span class="co"># format the result</span></span>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span> </span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">apply_fmt_fn</span>() <span class="co"># add a character column of rounded results</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
@@ -253,6 +254,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-stderr">
 <pre><code>ℹ 4 more variables: context, fmt_fn, warning, error</code></pre>
 </div>
+</div>
+<div class="notes">
+<p>Using the <code>by</code>, <code>statastic</code>, and <code>fmt_fn</code> arguments</p>
+<ul>
+<li><p><code>fmt_fn</code> uses integers as aliases, but can of course use a proper function</p></li>
+<li><p>note the new <code>group1</code> and <code>group1_level</code> columns. NO PROTECTED NAMES</p></li>
+</ul>
+<p>Also calling <code>apply_fmt_fn()</code> adds a column of formatted results</p>
 </div>
 </section>
 <section id="cards-ard_categorical" class="level2">
@@ -291,6 +300,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="small">
 <p><em>Any unobserved levels of the variables will be present in the resulting ARD.</em></p>
+</div>
+<div class="notes">
+<p>Categorical summaries have a similar structure to the continuous</p>
+<p>This time we have a new column <code>variable_level</code></p>
 </div>
 </section>
 <section id="cards-other-summary-functions" class="level2">

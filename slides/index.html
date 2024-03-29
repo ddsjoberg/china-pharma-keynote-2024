@@ -9,7 +9,7 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.551">
+  <meta name="generator" content="quarto-1.4.552">
 
   <meta name="author" content="蘇丹杰 (Daniel D. Sjoberg)">
   <title>CDISC Analysis Results Data with {cards}+{gtsummary} - CDISC Analysis Results Data with {cards} + {gtsummary}</title>
@@ -471,6 +471,22 @@
 <p><img data-src="images/ars-objectives.png" class="fragment quarto-figure quarto-figure-center"></p>
 </figure>
 </div>
+<aside class="notes">
+<p>CDISC has clear guidelines on how to collect, clean, and prepare data for analysis.</p>
+<p>But nothing about results!</p>
+<p><click></click></p>
+<p>The ARS is meant to fill that gap.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="analysis-results-standard-ars-1" class="slide level2">
 <h2>Analysis Results Standard (ARS)</h2>
@@ -481,6 +497,23 @@
 <li><p>Focus on concepts, <em>not layout</em>, e.g.&nbsp;the summary statistics, not how the results are shown in a table.</p></li>
 <li><p>Learn more at <a href="https://www.cdisc.org/events/webinar/analysis-results-standard-public-review">https://www.cdisc.org/events/webinar/analysis-results-standard-public-review</a></p></li>
 </ul>
+<aside class="notes">
+<p>Emphasis on the PROSPECTIVE!</p>
+<ul>
+<li><p>Automation</p></li>
+<li><p>Concepts, not layout</p></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="analysis-results-standard-ars-2" class="slide level2">
 <h2>Analysis Results Standard (ARS)</h2>
@@ -490,8 +523,7 @@
 <ul>
 <li><p>Overview of the meta data</p>
 <ul>
-<li><p>the data sets</p></li>
-<li><p>the exclusions (e.g.&nbsp;ITT population)</p></li>
+<li><p>the data sets, the exclusions (e.g.&nbsp;ITT population)</p></li>
 <li><p>I know the details here are sparse, but we need to get the meat of this presentation!</p></li>
 </ul></li>
 <li><p>Overview of ARD</p>
@@ -541,6 +573,17 @@
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
+<!-- ## Analysis Results Data (ARD) -->
+<!-- * Encodes statistical analysis outcomes in a machine-readable format. -->
+<!-- * Primary objective is to streamline the processes of automation, ensuring reproducibility, promoting reusability, and enhancing traceability. -->
+<!-- * The ARD model specified how statistical results are saved into a structured format. -->
+<!-- * The ARD can be used to to subsequently create tables and figures. -->
+<!-- * After the initial creation of an ARD, the results can later be re-used again and again for subsequent reporting needs; for example, re-creating a figure with only two of the three treatment arms shown, or pruning a large complex table to show only the most interesting results for a presentation (when the initial results may been prepared for regulatory purposes). -->
+</section></section>
+<section>
+<section id="analysis-results-data" class="title-slide slide level1 center">
+<h1>Analysis Results Data</h1>
+
 </section>
 <section id="analysis-results-data-ard" class="slide level2">
 <h2>Analysis Results Data (ARD)</h2>
@@ -549,24 +592,24 @@
 <li><p>Primary objective is to streamline the processes of automation, ensuring reproducibility, promoting reusability, and enhancing traceability.</p></li>
 <li><p>The ARD model specified how statistical results are saved into a structured format.</p></li>
 <li><p>The ARD can be used to to subsequently create tables and figures.</p></li>
-<li><p>After the initial creation of an ARD, the results can later be re-used again and again for subsequent reporting needs; for example, re-creating a figure with only two of the three treatment arms shown, or pruning a large complex table to show only the most interesting results for a presentation (when the initial results may been prepared for regulatory purposes).</p></li>
 </ul>
-</section></section>
-<section>
-<section id="analysis-results-data" class="title-slide slide level1 center">
-<h1>Analysis Results Data</h1>
-
+<aside class="notes">
+<p>This is where I start getting interested!</p>
+<p>The CDISC model is not over prescriptive how these results need to look.</p>
+<p>We’ll review our general approach, which lends itself to the R language</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="analysis-results-data-ard-1" class="slide level2">
-<h2>Analysis Results Data (ARD)</h2>
-<ul>
-<li><p>Encodes statistical analysis outcomes in a machine-readable format.</p></li>
-<li><p>Primary objective is to streamline the processes of automation, ensuring reproducibility, promoting reusability, and enhancing traceability.</p></li>
-<li><p>The ARD model specified how statistical results are saved into a structured format.</p></li>
-<li><p>The ARD can be used to to subsequently create tables and figures.</p></li>
-</ul>
-</section>
-<section id="analysis-results-data-ard-2" class="slide level2">
 <h2>Analysis Results Data (ARD)</h2>
 <ul>
 <li>After the initial creation of an ARD, the results can later be re-used again and again for subsequent reporting needs.</li>
@@ -574,7 +617,13 @@
 
 <img data-src="images/ard-flow.png" class="quarto-figure quarto-figure-center r-stretch"><aside class="notes">
 <ul>
-<li>Re-creating a figure with only two of the three treatment arms shown, or pruning a large complex table to show only the most interesting results for a presentation (when the initial results may been prepared for regulatory purposes).</li>
+<li><p>The same results can be used again and again.</p>
+<ul>
+<li>Great for when we are switching context (eg CSR to a slideshow): you don’t need to re-calculate and re-check those calculations</li>
+</ul></li>
+<li><p>Re-creating a figure with only 2 of the 3 treatment arms,</p></li>
+<li><p>Pruning a large complex table to show only the most interesting results for a presentation (when the initial results may been prepared for regulatory purposes).</p></li>
+<li></li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -621,9 +670,10 @@
 </div>
 <aside class="notes">
 <ul>
+<li><p>Best way to introduce is with a simple example</p></li>
 <li><p>one line per statistic</p></li>
 <li><p>includes default set of summary statistics</p></li>
-<li><p>default formatting function (in this case, the integer is shortcut to format/round to 1 decimal place)</p></li>
+<li><p>Briefly review each column: stat names, stat labels, numeric results, fmt_fn</p></li>
 <li><p>a simple data frame result, which means it is easy to work with a modify</p></li>
 </ul>
 <style type="text/css">
@@ -651,9 +701,9 @@
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>ADSL <span class="sc">|&gt;</span> </span>
 <span id="cb5-2"><a></a>  <span class="fu">ard_continuous</span>(</span>
 <span id="cb5-3"><a></a>    <span class="at">variables =</span> AGE,</span>
-<span id="cb5-4"><a></a>    <span class="at">by =</span> ARM, <span class="co"># calculate summary stats by treatment arm</span></span>
-<span id="cb5-5"><a></a>    <span class="at">statistic =</span> <span class="sc">~</span><span class="fu">list</span>(<span class="at">mean =</span> \(x) <span class="fu">mean</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)), <span class="co"># return the mean</span></span>
-<span id="cb5-6"><a></a>    <span class="at">fmt_fn =</span> <span class="sc">~</span><span class="fu">list</span>(<span class="at">mean =</span> <span class="dv">0</span>) <span class="co"># format the result</span></span>
+<span id="cb5-4"><a></a>    <span class="at">by =</span> ARM,                               <span class="co"># stats by treatment arm</span></span>
+<span id="cb5-5"><a></a>    <span class="at">statistic =</span> <span class="sc">~</span><span class="fu">list</span>(<span class="at">mean =</span> \(x) <span class="fu">mean</span>(x)), <span class="co"># return the mean</span></span>
+<span id="cb5-6"><a></a>    <span class="at">fmt_fn =</span> <span class="sc">~</span><span class="fu">list</span>(<span class="at">mean =</span> <span class="dv">0</span>)                <span class="co"># format the result</span></span>
 <span id="cb5-7"><a></a>  ) <span class="sc">|&gt;</span> </span>
 <span id="cb5-8"><a></a>  <span class="fu">apply_fmt_fn</span>() <span class="co"># add a character column of rounded results</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
@@ -669,6 +719,24 @@
 <pre><code>ℹ 4 more variables: context, fmt_fn, warning, error</code></pre>
 </div>
 </div>
+<aside class="notes">
+<p>Using the <code>by</code>, <code>statastic</code>, and <code>fmt_fn</code> arguments</p>
+<ul>
+<li><p><code>fmt_fn</code> uses integers as aliases, but can of course use a proper function</p></li>
+<li><p>note the new <code>group1</code> and <code>group1_level</code> columns. NO PROTECTED NAMES</p></li>
+</ul>
+<p>Also calling <code>apply_fmt_fn()</code> adds a column of formatted results</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="cards-ard_categorical" class="slide level2">
 <h2>{cards}: <code>ard_categorical()</code></h2>
@@ -707,6 +775,20 @@
 <div class="small">
 <p><em>Any unobserved levels of the variables will be present in the resulting ARD.</em></p>
 </div>
+<aside class="notes">
+<p>Categorical summaries have a similar structure to the continuous</p>
+<p>This time we have a new column <code>variable_level</code></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="cards-other-summary-functions" class="slide level2">
 <h2>{cards}: Other Summary Functions</h2>
@@ -753,6 +835,7 @@
 </ul>
 <aside class="notes">
 <p>Yes, this is also a draft hex sticker!</p>
+<p>I could do an entire talk on the regression model solution. It’s amazing work with Joseph Larmarange.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -796,17 +879,32 @@
 <pre><code>ℹ 2 more variables: warning, error</code></pre>
 </div>
 </div>
+<aside class="notes">
+<p>Notice anything strange about the <code>stat</code> column?</p>
+<p>How do we have a character result mixed with numeric?</p>
+<p>LIST COLUMNS! You could include a matrix result, an entire modeling object, anything.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="cardx-in-practice-gone-wrong" class="slide level2">
 <h2>{cardx} in Practice: <em>Gone Wrong</em> 😱</h2>
 <p>What happens when statistics are un-calculable?</p>
-<p>(It’s one of my favorite features of {cards} and {cardx})</p>
+<p><em>It’s one of my favorite features of {cards} and {cardx}</em></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>ard_gone_wrong <span class="ot">&lt;-</span> </span>
 <span id="cb19-2"><a></a>  cards<span class="sc">::</span>ADSL <span class="sc">|&gt;</span> </span>
 <span id="cb19-3"><a></a>  cards<span class="sc">::</span><span class="fu">ard_continuous</span>(</span>
 <span id="cb19-4"><a></a>    <span class="at">variable =</span> AGEGR1,</span>
-<span id="cb19-5"><a></a>    <span class="at">statistic =</span> <span class="sc">~</span><span class="fu">list</span>(<span class="at">kurtosis =</span> \(x) e1071<span class="sc">::</span><span class="fu">kurtosis</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb19-5"><a></a>    <span class="at">statistic =</span> <span class="sc">~</span><span class="fu">list</span>(<span class="at">kurtosis =</span> \(x) e1071<span class="sc">::</span><span class="fu">kurtosis</span>(x))</span>
 <span id="cb19-6"><a></a>  )</span>
 <span id="cb19-7"><a></a>ard_gone_wrong</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
@@ -826,6 +924,7 @@
 </div>
 <aside class="notes">
 <ul>
+<li><p>Where is the statistic? <code>AGEGR1</code> is <em>character</em></p></li>
 <li><p>Even when there are errors or warnings, we still get the ARD with the expected structure returned.</p>
 <ul>
 <li><p>THIS IS BIG! There are MANY circumstances, when you are designing TLGs early in a study when you do not have all the data required to calculate every statistic.</p></li>
@@ -844,6 +943,14 @@
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
+</section>
+<section id="cards-cardx" class="slide level2">
+<h2>{cards} + {cardx}</h2>
+<ul>
+<li><p>These packages together provide robust set of tools for preparing ARDs.</p></li>
+<li><p>Incredibly easy to extend them for your own specific cases.</p></li>
+<li><p>But what’s next? I want a pretty table!</p></li>
+</ul>
 </section></section>
 <section>
 <section id="gtsummary" class="title-slide slide level1 center">
@@ -856,7 +963,7 @@
 <li><p>Born from my time as a biostatistician at Memorial Sloan Kettering Cancer Center.</p></li>
 <li><p>I led a team of other statisticians and I wanted us to transition to R.</p></li>
 <li><p>Began writing a package that eventually became {gtsummary} to help make this transition smooth.</p></li>
-<li><p>Since then the package grew and grew, and is now the <strong>most downloaded</strong> summary table package on CRAN.</p></li>
+<li><p>Since then the package has grown and grown, and is now the <strong>most downloaded</strong> summary table package on CRAN.</p></li>
 <li><p>Package the American Statistical Association’s (ASA) 2021 award for Innovation in Statistical Programming and Analytics</p></li>
 </ul>
 </section>
@@ -867,6 +974,7 @@
 <ul>
 <li><p>gtsummary tables are composable, that leads to a wonderful user experience</p></li>
 <li><p>no more needing to memorize an enormous function with too many arguments</p></li>
+<li><p>Importantly, INCLUDES A GRAMMER FOR merging AND stacking. This is huge for creating bespoke tables.</p></li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -887,7 +995,7 @@
 <ul>
 <li><p>a gtsummary table can be converted into any of these types, and styling and formatting functions from those packages can be used to continue to make the table <em>exactly</em> as you’d like.</p></li>
 <li><p>each of these engines have their own strengths</p></li>
-<li><p>there is a lot more i could share about the package: I’ve never given a three-slide summary of its features before!</p></li>
+<li><p>there is a lot more I could share about the package: I’ve never given a three-slide summary of its features before!</p></li>
 </ul>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -913,7 +1021,26 @@
 <section id="cards-gtsummary-1" class="slide level2">
 <h2>{cards} + {gtsummary}</h2>
 
-<img data-src="images/ard-gtsummary-workflow.png" class="r-stretch"></section>
+<img data-src="images/ard-gtsummary-workflow.png" class="r-stretch"><aside class="notes">
+<ul>
+<li><p>Integrating with the most popular summary tabling package in the R ecosystem is BIG!</p></li>
+<li><p>With a huge user base, you can easily find solutions for your esoteric questions</p>
+<ul>
+<li>Questions that have likely alreday been answered on stackoverflow.</li>
+</ul></li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
 <section id="stay-tuned" class="slide level2">
 <h2>Stay Tuned!</h2>
 <div class="columns">
@@ -933,9 +1060,9 @@
 </div>
 <aside class="notes">
 <ul>
-<li><p>And I will get to these hux logos too!</p></li>
-<li><p>If you have suggestions, please join the conversation.</p></li>
-<li><p><click></click></p></li>
+<li><p>And I will get to these hex logos too!</p></li>
+<li><p>If you have suggestions, please join the conversation on GitHub</p></li>
+<li><p>CLICK</p></li>
 <li><p>Any questions??</p></li>
 </ul>
 <style type="text/css">
@@ -979,23 +1106,23 @@
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<div id="mbytsdyjzk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#mbytsdyjzk table {
+<div id="vlzheyyjyg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#vlzheyyjyg table {
   font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#mbytsdyjzk thead, #mbytsdyjzk tbody, #mbytsdyjzk tfoot, #mbytsdyjzk tr, #mbytsdyjzk td, #mbytsdyjzk th {
+#vlzheyyjyg thead, #vlzheyyjyg tbody, #vlzheyyjyg tfoot, #vlzheyyjyg tr, #vlzheyyjyg td, #vlzheyyjyg th {
   border-style: none;
 }
 
-#mbytsdyjzk p {
+#vlzheyyjyg p {
   margin: 0;
   padding: 0;
 }
 
-#mbytsdyjzk .gt_table {
+#vlzheyyjyg .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1021,12 +1148,12 @@
   border-left-color: #D3D3D3;
 }
 
-#mbytsdyjzk .gt_caption {
+#vlzheyyjyg .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#mbytsdyjzk .gt_title {
+#vlzheyyjyg .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1038,7 +1165,7 @@
   border-bottom-width: 0;
 }
 
-#mbytsdyjzk .gt_subtitle {
+#vlzheyyjyg .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1050,7 +1177,7 @@
   border-top-width: 0;
 }
 
-#mbytsdyjzk .gt_heading {
+#vlzheyyjyg .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1062,13 +1189,13 @@
   border-right-color: #D3D3D3;
 }
 
-#mbytsdyjzk .gt_bottom_border {
+#vlzheyyjyg .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#mbytsdyjzk .gt_col_headings {
+#vlzheyyjyg .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1083,7 +1210,7 @@
   border-right-color: #D3D3D3;
 }
 
-#mbytsdyjzk .gt_col_heading {
+#vlzheyyjyg .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1103,7 +1230,7 @@
   overflow-x: hidden;
 }
 
-#mbytsdyjzk .gt_column_spanner_outer {
+#vlzheyyjyg .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1115,15 +1242,15 @@
   padding-right: 4px;
 }
 
-#mbytsdyjzk .gt_column_spanner_outer:first-child {
+#vlzheyyjyg .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#mbytsdyjzk .gt_column_spanner_outer:last-child {
+#vlzheyyjyg .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#mbytsdyjzk .gt_column_spanner {
+#vlzheyyjyg .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1135,11 +1262,11 @@
   width: 100%;
 }
 
-#mbytsdyjzk .gt_spanner_row {
+#vlzheyyjyg .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#mbytsdyjzk .gt_group_heading {
+#vlzheyyjyg .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1165,7 +1292,7 @@
   text-align: left;
 }
 
-#mbytsdyjzk .gt_empty_group_heading {
+#vlzheyyjyg .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1180,15 +1307,15 @@
   vertical-align: middle;
 }
 
-#mbytsdyjzk .gt_from_md > :first-child {
+#vlzheyyjyg .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#mbytsdyjzk .gt_from_md > :last-child {
+#vlzheyyjyg .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#mbytsdyjzk .gt_row {
+#vlzheyyjyg .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1207,7 +1334,7 @@
   overflow-x: hidden;
 }
 
-#mbytsdyjzk .gt_stub {
+#vlzheyyjyg .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1220,7 +1347,7 @@
   padding-right: 5px;
 }
 
-#mbytsdyjzk .gt_stub_row_group {
+#vlzheyyjyg .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1234,15 +1361,15 @@
   vertical-align: top;
 }
 
-#mbytsdyjzk .gt_row_group_first td {
+#vlzheyyjyg .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#mbytsdyjzk .gt_row_group_first th {
+#vlzheyyjyg .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#mbytsdyjzk .gt_summary_row {
+#vlzheyyjyg .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1252,16 +1379,16 @@
   padding-right: 5px;
 }
 
-#mbytsdyjzk .gt_first_summary_row {
+#vlzheyyjyg .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#mbytsdyjzk .gt_first_summary_row.thick {
+#vlzheyyjyg .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#mbytsdyjzk .gt_last_summary_row {
+#vlzheyyjyg .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1271,7 +1398,7 @@
   border-bottom-color: #D3D3D3;
 }
 
-#mbytsdyjzk .gt_grand_summary_row {
+#vlzheyyjyg .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1281,7 +1408,7 @@
   padding-right: 5px;
 }
 
-#mbytsdyjzk .gt_first_grand_summary_row {
+#vlzheyyjyg .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1291,7 +1418,7 @@
   border-top-color: #D3D3D3;
 }
 
-#mbytsdyjzk .gt_last_grand_summary_row_top {
+#vlzheyyjyg .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1301,11 +1428,11 @@
   border-bottom-color: #D3D3D3;
 }
 
-#mbytsdyjzk .gt_striped {
+#vlzheyyjyg .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#mbytsdyjzk .gt_table_body {
+#vlzheyyjyg .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1314,7 +1441,7 @@
   border-bottom-color: #D3D3D3;
 }
 
-#mbytsdyjzk .gt_footnotes {
+#vlzheyyjyg .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1328,7 +1455,7 @@
   border-right-color: #D3D3D3;
 }
 
-#mbytsdyjzk .gt_footnote {
+#vlzheyyjyg .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1337,7 +1464,7 @@
   padding-right: 5px;
 }
 
-#mbytsdyjzk .gt_sourcenotes {
+#vlzheyyjyg .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1351,7 +1478,7 @@
   border-right-color: #D3D3D3;
 }
 
-#mbytsdyjzk .gt_sourcenote {
+#vlzheyyjyg .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1359,63 +1486,63 @@
   padding-right: 5px;
 }
 
-#mbytsdyjzk .gt_left {
+#vlzheyyjyg .gt_left {
   text-align: left;
 }
 
-#mbytsdyjzk .gt_center {
+#vlzheyyjyg .gt_center {
   text-align: center;
 }
 
-#mbytsdyjzk .gt_right {
+#vlzheyyjyg .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#mbytsdyjzk .gt_font_normal {
+#vlzheyyjyg .gt_font_normal {
   font-weight: normal;
 }
 
-#mbytsdyjzk .gt_font_bold {
+#vlzheyyjyg .gt_font_bold {
   font-weight: bold;
 }
 
-#mbytsdyjzk .gt_font_italic {
+#vlzheyyjyg .gt_font_italic {
   font-style: italic;
 }
 
-#mbytsdyjzk .gt_super {
+#vlzheyyjyg .gt_super {
   font-size: 65%;
 }
 
-#mbytsdyjzk .gt_footnote_marks {
+#vlzheyyjyg .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#mbytsdyjzk .gt_asterisk {
+#vlzheyyjyg .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#mbytsdyjzk .gt_indent_1 {
+#vlzheyyjyg .gt_indent_1 {
   text-indent: 5px;
 }
 
-#mbytsdyjzk .gt_indent_2 {
+#vlzheyyjyg .gt_indent_2 {
   text-indent: 10px;
 }
 
-#mbytsdyjzk .gt_indent_3 {
+#vlzheyyjyg .gt_indent_3 {
   text-indent: 15px;
 }
 
-#mbytsdyjzk .gt_indent_4 {
+#vlzheyyjyg .gt_indent_4 {
   text-indent: 20px;
 }
 
-#mbytsdyjzk .gt_indent_5 {
+#vlzheyyjyg .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
